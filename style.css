@@ -1,4 +1,4 @@
-/* style.css (하늘색 파스텔톤 업그레이드 💙) */
+/* style.css (하늘색 & 분홍색 포인트 업그레이드 💖) */
 
 /* 1. 폰트 및 기본 설정 */
 body {
@@ -34,9 +34,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Gowun Dodum', sans-serif;
 }
 
-/* 3. 네비게이션 바 (메뉴) */
+/* 3. 네비게이션 바 (메뉴) - 더 연한 하늘색으로 변경 */
 .nav {
-    background-color: #89cff0; /* 💙 헤더보다 살짝 연한 하늘색 */
+    background-color: #a0d6f3; /* 💎 네비게이션 바 색상 변경 */
     text-align: center;
     padding: 15px 0;
     position: sticky;
@@ -70,13 +70,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 40px;
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(116, 185, 255, 0.15); /* 💙 하늘색 그림자 */
+    box-shadow: 0 6px 15px rgba(116, 185, 255, 0.15); /* 하늘색 그림자 */
 }
 
 /* 5. 콘텐츠 내부 요소 */
 .container h2 {
     color: #74b9ff; /* 💙 제목 색상 */
-    border-bottom: 2px solid #e1f0ff; /* 연한 하늘색 밑줄 */
+    border-bottom: 2px solid #e1f0ff; 
     padding-bottom: 10px;
     margin-top: 40px;
 }
@@ -89,9 +89,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 30px;
 }
 
-/* 링크 스타일 (민트색 포인트) */
+/* 링크 스타일 (분홍색 포인트로 변경) */
 a {
-    color: #48c9b0; /* 🟢 민트색 포인트 */
+    color: #f3a6b6; /* 💖 분홍색 포인트로 변경 */
     text-decoration: none;
     font-weight: bold;
 }
