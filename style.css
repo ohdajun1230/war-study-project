@@ -1,25 +1,23 @@
-/* style.css (MZ 파스텔톤 업그레이드 💜) */
+/* style.css (하늘색 파스텔톤 업그레이드 💙) */
 
 /* 1. 폰트 및 기본 설정 */
 body {
-    /* 1단계에서 가져온 'Gowun Dodum' 폰트 적용 */
     font-family: 'Gowun Dodum', Roboto, sans-serif;
     line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #fdfafc; /* 매우 연한 분홍/보라빛 배경 */
-    color: #4a4a4a; /* 너무 진하지 않은 회색 글씨 */
+    background-color: #f7f9fb; /* 매우 연한 하늘색/흰색 배경 */
+    color: #4a4a4a; 
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /* 1단계에서 가져온 'IBM Plex Sans KR' 폰트 적용 */
     font-family: 'IBM Plex Sans KR', sans-serif;
-    font-weight: 700; /* 제목은 두껍게 */
+    font-weight: 700;
 }
 
-/* 2. 상단 헤더 (연보라색) */
+/* 2. 상단 헤더 (메인 하늘색) */
 .header {
-    background-color: #a991d4; /* 💜 메인 파스텔 연보라 */
+    background-color: #74b9ff; /* 💙 메인 파스텔 하늘색 */
     color: white;
     padding: 70px 30px;
     text-align: center;
@@ -33,12 +31,12 @@ h1, h2, h3, h4, h5, h6 {
 .header p {
     font-size: 1.2em;
     opacity: 0.9;
-    font-family: 'Gowun Dodum', sans-serif; /* 부제는 본문 폰트로 */
+    font-family: 'Gowun Dodum', sans-serif;
 }
 
 /* 3. 네비게이션 바 (메뉴) */
 .nav {
-    background-color: #baabda; /* 💜 헤더보다 살짝 연한 보라 */
+    background-color: #89cff0; /* 💙 헤더보다 살짝 연한 하늘색 */
     text-align: center;
     padding: 15px 0;
     position: sticky;
@@ -52,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     padding: 12px 20px;
     margin: 0 8px;
-    font-family: 'IBM Plex Sans KR', sans-serif; /* 메뉴도 제목 폰트 */
+    font-family: 'IBM Plex Sans KR', sans-serif;
     font-weight: 500;
     font-size: 1.05em;
     transition: background-color 0.3s, color 0.3s;
@@ -62,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 /* 메뉴에 마우스를 올렸을 때 */
 .nav a:hover {
     background-color: #ffffff; /* 흰색 배경 */
-    color: #a991d4; /* 💜 연보라색 글씨 */
+    color: #74b9ff; /* 💙 하늘색 글씨 */
 }
 
 /* 4. 메인 콘텐츠 영역 */
@@ -71,14 +69,14 @@ h1, h2, h3, h4, h5, h6 {
     margin: 50px auto;
     padding: 40px;
     background-color: white;
-    border-radius: 12px; /* 모서리를 좀 더 둥글게 */
-    box-shadow: 0 6px 15px rgba(169, 145, 212, 0.1); /* 💜 연보라색 그림자 */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(116, 185, 255, 0.15); /* 💙 하늘색 그림자 */
 }
 
 /* 5. 콘텐츠 내부 요소 */
 .container h2 {
-    color: #a991d4; /* 💜 제목 색상 */
-    border-bottom: 2px solid #f0ebf5; /* 연한 보라색 밑줄 */
+    color: #74b9ff; /* 💙 제목 색상 */
+    border-bottom: 2px solid #e1f0ff; /* 연한 하늘색 밑줄 */
     padding-bottom: 10px;
     margin-top: 40px;
 }
@@ -87,15 +85,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container h3 {
-    color: #baabda; /* 💜 중간 제목 색상 */
+    color: #89cff0; /* 💙 중간 제목 색상 */
     margin-top: 30px;
 }
 
-/* 링크 스타일 (분홍색) */
+/* 링크 스타일 (민트색 포인트) */
 a {
-    color: #f3a6b6; /* 🌸 파스텔 분홍 포인트 */
+    color: #48c9b0; /* 🟢 민트색 포인트 */
     text-decoration: none;
-    font-weight: bold; /* 링크 강조 */
+    font-weight: bold;
 }
 a:hover {
     text-decoration: underline;
@@ -106,7 +104,7 @@ a:hover {
     text-align: center;
     padding: 40px 20px;
     margin-top: 60px;
-    border-top: 1px solid #f0ebf5;
+    border-top: 1px solid #e1f0ff;
     color: #aaa;
     font-size: 0.9em;
 }
