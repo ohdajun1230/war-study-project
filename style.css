@@ -1,80 +1,108 @@
-/* style.css */
+/* style.css (업그레이드 버전) */
 
-/* 전체 페이지 기본 설정 */
+/* 1. 폰트 및 기본 설정 */
 body {
-    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', Roboto, sans-serif;
-    line-height: 1.6;
+    font-family: 'Noto Sans KR', Roboto, sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6; /* 연한 회색 배경 */
-    color: #333;
+    background-color: #f8f9fa; /* 밝은 회색 배경 */
+    color: #212529; /* 부드러운 검정 글씨 */
 }
 
-/* 상단 헤더 (제목 영역) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+/* 2. 상단 헤더 (제목 영역) */
 .header {
-    background-color: #34495e; /* 어두운 청록색 */
+    background-color: #2c3e50; /* 남색 계열 (기존 유지) */
     color: white;
-    padding: 60px 20px;
+    padding: 70px 30px; /* 위아래 여백을 더 줌 */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     margin: 0 0 10px 0;
 }
 
 .header p {
-    font-size: 1.1em;
-    font-style: italic;
-    opacity: 0.8;
+    font-size: 1.2em;
+    opacity: 0.9;
 }
 
-/* 네비게이션 바 (메뉴) */
+/* 3. 네비게이션 바 (메뉴) */
 .nav {
-    background-color: #2c3e50; /* 헤더보다 더 진한 색 */
+    background-color: #34495e; /* 헤더보다 살짝 밝은색 */
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+    /* 메뉴바를 페이지 상단에 고정 (선택 사항) */
+    position: sticky; 
+    top: 0;
+    z-index: 100; /* 다른 요소 위에 표시되도록 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 고정 시 그림자 */
 }
 
 .nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    padding: 12px 20px;
+    margin: 0 8px;
+    font-weight: 500; /* Noto Sans KR 500 (Medium) */
+    font-size: 1.05em;
+    transition: background-color 0.3s, color 0.3s;
     border-radius: 5px;
 }
 
+/* 메뉴에 마우스를 올렸을 때 */
 .nav a:hover {
-    background-color: #1abc9c; /* 호버 시 밝은 색 */
+    background-color: #ffffff; /* 흰색 배경 */
+    color: #2c3e50; /* 남색 글씨 */
 }
 
-/* 메인 콘텐츠 영역 */
+/* 4. 메인 콘텐츠 영역 (가장 큰 변화) */
 .container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
+    max-width: 900px; /* 본문 폭을 살짝 줄여 가독성 향상 */
+    margin: 50px auto; /* 위아래 여백 추가 */
+    padding: 40px; /* 내부 여백 넉넉하게 */
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* 부드러운 그림자 효과로 입체감 주기 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
 }
 
-/* 섹션 제목 */
+/* 5. 콘텐츠 내부 요소 */
 .container h2 {
-    color: #3498db; /* 파란색 제목 */
-    border-bottom: 2px solid #eee;
+    color: #2c3e50; /* 제목 색상을 테마 색상과 통일 */
+    border-bottom: 2px solid #ecf0f1; /* 연한 회색 밑줄 */
     padding-bottom: 10px;
+    margin-top: 40px; /* 섹션 간 간격 */
+}
+.container h2:first-child {
+    margin-top: 0; /* 첫 번째 제목은 위쪽 여백 제거 */
+}
+
+.container h3 {
+    color: #34495e;
     margin-top: 30px;
 }
 
-/* 푸터 (하단) */
+/* 링크 스타일 */
+a {
+    color: #3498db; /* 기본 링크 색상 */
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* 6. 푸터 (하단) */
 .footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    border-top: 1px solid #ddd;
-    color: #777;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid #eee;
+    color: #888;
     font-size: 0.9em;
 }
