@@ -17,12 +17,13 @@
                 <a href="gallery.html">갤러리</a>
                 <a href="map.html">지도</a>
                 <a href="resources.html">자료실</a>
-            </div>
+                <a href="guestbook.html">방명록</a> </div>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-bg"></div> <div class="hero-content">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
             <div class="hero-label">2025 Graduation Project</div>
             <h1>기록되지 않은 역사는<br>반복됩니다.</h1>
             <p>전쟁의 아픔이 서린 현장을 직접 방문하고,<br>평화의 가치를 다시금 새기는 기록의 여정.</p>
@@ -52,7 +53,7 @@
                 <div>
                     <div class="card-tag">Location Map</div>
                     <h3>현장 방문 지도</h3>
-                    <p>용산 전쟁기념관에서<br>철원 노동당사까지.<br>지도로 보는 답사 경로.</p>
+                    <p>용산에서 철원까지.<br>지도로 보는 답사 경로.</p>
                 </div>
                 <div class="card-link-icon">📍</div>
                 <img src="images/map_thumb.jpg" class="card-bg-img" alt="">
@@ -72,7 +73,7 @@
                 <div>
                     <div class="card-tag">Archive</div>
                     <h3>자료실</h3>
-                    <p>발표 자료 및 보고서<br>다운로드.</p>
+                    <p>보고서 다운로드.</p>
                 </div>
                 <div class="card-link-icon">💾</div>
             </a>
@@ -81,9 +82,18 @@
                 <div>
                     <div class="card-tag">Guestbook</div>
                     <h3>방문자 방명록</h3>
-                    <p>여러분의 소중한 의견과 피드백을 남겨주세요.<br>작은 관심이 큰 힘이 됩니다.</p>
+                    <p>여러분의 소중한 의견과 피드백을 남겨주세요.</p>
                 </div>
                 <div class="card-link-icon">💬</div>
+            </a>
+
+            <a href="about.html" class="card fade-in-scroll">
+                <div>
+                    <div class="card-tag">Profile</div>
+                    <h3>나의 소개</h3>
+                    <p>프로젝트 기획자<br>[다준] 프로필.</p>
+                </div>
+                <div class="card-link-icon">🙋‍♂️</div>
             </a>
 
         </div>
@@ -91,21 +101,16 @@
 
     <footer class="footer">
         <h3>WAR & PEACE</h3>
-        <p>2025 [다준] 졸업 프로젝트 Archive.<br>Designed inspired by Apple & Toss.</p>
+        <p>2025 [다준] 졸업 프로젝트 Archive.</p>
     </footer>
 
     <script>
-        // 스크롤하면 요소가 부드럽게 나타나는 효과
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
     </script>
-
 </body>
 </html>
