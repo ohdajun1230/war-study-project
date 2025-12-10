@@ -3,79 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자료실 - 졸업 프로젝트</title>
+    <title>자료실</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
-    
-    <style>
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
-        th { color: #74b9ff; font-weight: 600; }
-        td a { font-weight: bold; }
-    </style>
 </head>
 <body>
 
-    <header class="header">
-        <h1 class="fade-in">자료실</h1>
-        <p class="fade-in delay-1">프로젝트와 관련된 발표 자료 및 보고서를 공유합니다.</p>
-    </header>
-
-    <nav class="nav fade-in delay-2">
-        <a href="index.html">홈</a>
-        <a href="about.html">나의 소개</a>
-        <a href="project.html">프로젝트</a>
-        <a href="gallery.html">갤러리</a>
-        <a href="map.html">지도</a>  
-        <a href="resources.html">자료실</a>
-        <a href="guestbook.html">방명록</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">WAR & PEACE</a>
+            <div class="nav-links">
+                <a href="about.html">소개</a>
+                <a href="project.html">프로젝트</a>
+                <a href="gallery.html">갤러리</a>
+                <a href="map.html">지도</a>
+                <a href="resources.html">자료실</a>
+                <a href="guestbook.html">방명록</a>
+            </div>
+        </div>
     </nav>
 
-    <main class="container">
-        
-        <div class="apple-card fade-in delay-3">
-            <h2>📁 Archived Files</h2>
-            <p>프로젝트 진행 과정에서 작성된 주요 문서입니다.</p>
+    <header class="page-header fade-in-scroll">
+        <h1 class="page-title">Resources Archive</h1>
+        <p class="page-desc">프로젝트 진행 과정에서 작성된 주요 문서와<br>발표 자료를 공유합니다.</p>
+    </header>
+
+    <main class="section fade-in-scroll">
+        <div class="content-box">
+            <div style="margin-bottom: 30px; display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 24px;">📂</span>
+                <h3 style="margin: 0;">Download Files</h3>
+            </div>
 
             <table>
                 <thead>
                     <tr>
                         <th width="10%">No.</th>
-                        <th width="60%">자료 제목</th>
-                        <th width="15%">형식</th>
-                        <th width="15%">다운로드</th>
+                        <th width="50%">자료 제목</th>
+                        <th width="20%">파일 형식</th>
+                        <th width="20%">다운로드</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>졸업 프로젝트 최종 보고서</td>
-                        <td>PDF</td>
-                        <td><a href="#">Download</a></td>
+                        <td style="font-weight: 600;">졸업 프로젝트 최종 보고서</td>
+                        <td><span style="background:#eee; padding:4px 8px; border-radius:4px; font-size:12px;">PDF</span></td>
+                        <td><a href="#" style="color:#3182f6; font-weight:700;">Download ↓</a></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>중간 발표 프레젠테이션</td>
-                        <td>PPTX</td>
-                        <td><a href="#">Download</a></td>
+                        <td style="font-weight: 600;">중간 발표 프레젠테이션</td>
+                        <td><span style="background:#eee; padding:4px 8px; border-radius:4px; font-size:12px;">PPTX</span></td>
+                        <td><a href="#" style="color:#3182f6; font-weight:700;">Download ↓</a></td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>답사 계획표 및 일정</td>
-                        <td>HWP</td>
-                        <td><a href="#">Download</a></td>
+                        <td style="font-weight: 600;">현장 답사 계획표 및 일정</td>
+                        <td><span style="background:#eee; padding:4px 8px; border-radius:4px; font-size:12px;">HWP</span></td>
+                        <td><a href="#" style="color:#3182f6; font-weight:700;">Download ↓</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 [다준]. 졸업 프로젝트. All Rights Reserved.</p>
+        <h3>WAR & PEACE</h3>
+        <p>2025 [다준] 졸업 프로젝트 Archive.</p>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
+    </script>
 
 </body>
 </html>
