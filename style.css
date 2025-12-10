@@ -1,76 +1,74 @@
-/* style.css (Apple Style + Sky Blue & Pink Theme) */
+/* style.css (Modern Professional - Midnight Blue Theme) */
 
-/* 1. 기본 설정 (애플 스타일의 밝은 회색 배경) */
+/* 1. 기본 설정 (프리미엄한 느낌의 폰트와 배경) */
 body {
-    font-family: 'Gowun Dodum', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.8;
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; /* 시스템 폰트 우선 */
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f7; /* 애플 특유의 연한 회색 배경 */
-    color: #1d1d1f; /* 완전 검정이 아닌 진한 회색 */
-    word-break: keep-all; /* 한글 단어 끊김 방지 */
+    background-color: #f5f5f7; /* 애플 특유의 연회색 배경 */
+    color: #1d1d1f; /* 완전 검정이 아닌 짙은 회색 (눈이 편안함) */
+    word-break: keep-all;
 }
 
-/* 제목 폰트 */
 h1, h2, h3, h4 {
-    font-family: 'IBM Plex Sans KR', sans-serif;
     font-weight: 700;
-    letter-spacing: -0.02em; /* 자간을 살짝 좁혀서 세련되게 */
+    letter-spacing: -0.03em; /* 자간을 좁혀서 단단한 느낌 */
+    color: #111;
 }
 
-/* 링크 스타일 */
+/* 링크 스타일: 분홍색을 빼고 차분한 블루로 변경 */
 a {
-    color: #f3a6b6; /* 💖 분홍색 포인트 */
+    color: #0071e3; /* 애플의 시그니처 블루 */
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.2s ease;
 }
 a:hover {
-    color: #ff8fa3;
+    color: #004d9c; /* 호버 시 조금 더 어두워짐 */
     text-decoration: underline;
 }
 
-/* 2. 헤더 (Hero Section) */
+/* 2. 헤더 (그라데이션 제거 -> 깔끔한 화이트/다크 모드 느낌) */
 .header {
-    background: linear-gradient(135deg, #74b9ff 0%, #a0d6f3 100%); /* 하늘색 그라데이션 */
-    color: white;
-    padding: 120px 20px 100px; /* 위아래 여백을 시원하게 */
+    background-color: #1d1d1f; /* 아주 짙은 네이비/블랙 배경 (무게감) */
+    color: #f5f5f7; /* 흰색 글씨 */
+    padding: 140px 20px 100px; /* 여백을 충분히 */
     text-align: center;
     position: relative;
-    margin-bottom: -50px; /* 네비게이션과 자연스럽게 겹치기 위해 */
+    margin-bottom: -40px;
 }
 
 .header h1 {
-    font-size: 3em;
+    color: white;
+    font-size: 3.2em;
     margin: 0 0 15px 0;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-weight: 800;
 }
 
 .header p {
-    font-size: 1.3em;
-    opacity: 0.95;
+    font-size: 1.2em;
+    color: #a1a1a6; /* 연한 회색으로 서브 텍스트 처리 */
     font-weight: 400;
 }
 
-/* 3. 네비게이션 (글래스모피즘 + 플로팅 알약 디자인) */
+/* 3. 네비게이션 (유리 효과 극대화) */
 .nav {
     position: sticky;
-    top: 20px; /* 화면 상단에서 살짝 떨어짐 */
+    top: 20px;
     z-index: 1000;
-    
     width: 90%;
-    max-width: 700px;
-    margin: 0 auto 50px auto; /* 중앙 정렬 */
+    max-width: 680px;
+    margin: 0 auto 60px auto;
     
-    background-color: rgba(255, 255, 255, 0.75); /* 반투명 흰색 */
-    backdrop-filter: blur(20px); /* ✨ 유리처럼 흐릿한 효과 */
-    -webkit-backdrop-filter: blur(20px); /* 사파리 호환 */
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명 화이트 */
+    backdrop-filter: blur(20px) saturate(180%); /* 애플 스타일 블러 */
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     
-    border-radius: 50px; /* 둥근 알약 모양 */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100px; /* 완전 둥근 알약 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* 그림자를 더 은은하게 */
+    border: 1px solid rgba(255, 255, 255, 0.3);
     
-    text-align: center;
-    padding: 12px 0;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -78,124 +76,116 @@ a:hover {
 }
 
 .nav a {
-    color: #4a4a4a;
+    color: #515154; /* 메뉴 글씨는 진한 회색 */
     font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 25px;
+    padding: 8px 18px;
+    border-radius: 30px;
     font-size: 0.95em;
 }
 
 .nav a:hover {
-    background-color: rgba(116, 185, 255, 0.15); /* 호버 시 연한 하늘색 배경 */
-    color: #74b9ff;
+    background-color: #000; /* 호버 시 검정 배경 */
+    color: #fff; /* 글씨는 흰색 */
     text-decoration: none;
 }
 
-/* 4. 메인 컨테이너 (레이아웃) */
+/* 4. 메인 컨테이너 */
 .container {
-    max-width: 960px;
-    margin: 0 auto 80px auto;
+    max-width: 980px; /* 애플 사이트 표준 너비 */
+    margin: 0 auto 100px auto;
     padding: 0 20px;
 }
 
-/* 5. ✨ 애플 스타일 카드 박스 (Apple Card) */
-/* 모든 내용을 이 박스 안에 넣으면 예뻐집니다 */
+/* 5. 카드 박스 (그림자를 더 부드럽게, 테두리 삭제) */
 .apple-card {
     background-color: white;
-    border-radius: 24px; /* 모서리를 아주 둥글게 */
-    padding: 50px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); /* 은은하고 넓은 그림자 */
+    border-radius: 20px;
+    padding: 60px; /* 내부 여백을 늘려서 고급스럽게 */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04); /* 아주 연한 그림자 */
     margin-bottom: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .apple-card:hover {
-    transform: translateY(-5px); /* 마우스 올리면 살짝 떠오름 */
-    box-shadow: 0 30px 60px rgba(116, 185, 255, 0.15); /* 하늘색 그림자 살짝 */
+    transform: translateY(-5px);
 }
 
-/* 카드 내부 제목 스타일 */
 .apple-card h2 {
-    color: #1d1d1f;
-    font-size: 2em;
+    font-size: 2.2em;
     margin-top: 0;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #f5f5f7;
-    padding-bottom: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5; /* 아주 연한 구분선 */
 }
 
 .apple-card h3 {
-    color: #74b9ff; /* 하늘색 소제목 */
-    font-size: 1.5em;
-    margin-top: 40px;
+    color: #1d1d1f; /* 제목도 검정색 유지 (색상 절제) */
+    font-size: 1.6em;
+    margin-top: 50px;
     margin-bottom: 15px;
 }
 
-/* 6. ✨ 애니메이션 (나타나기 효과) */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-    animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0; /* 시작할 때 안 보임 */
-}
-
-/* 순차적 딜레이 */
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.3s; }
-.delay-3 { animation-delay: 0.5s; }
-
-
-/* 7. 타임라인 (Project 페이지용) */
+/* 6. 타임라인 (색상 절제) */
 .timeline {
-    position: relative;
-    border-left: 3px solid #e1f0ff;
+    border-left: 2px solid #d2d2d7; /* 연한 회색 선 */
     margin-left: 10px;
     padding-left: 30px;
 }
-.timeline-item { margin-bottom: 40px; position: relative; }
+.timeline-item { margin-bottom: 50px; position: relative; }
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -39px; top: 5px;
-    width: 15px; height: 15px;
-    background: white;
-    border: 3px solid #f3a6b6; /* 분홍색 점 */
+    left: -37px; top: 5px;
+    width: 12px; height: 12px;
+    background: #1d1d1f; /* 검정색 점 */
+    border: 2px solid #fff; /* 흰색 테두리 */
+    box-shadow: 0 0 0 2px #d2d2d7;
     border-radius: 50%;
 }
 .timeline-date {
     display: inline-block;
-    padding: 4px 10px;
-    background-color: #f0f8ff;
-    color: #74b9ff;
-    border-radius: 12px;
-    font-size: 0.85em;
-    font-weight: bold;
-    margin-bottom: 10px;
+    color: #86868b; /* 날짜는 회색으로 */
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-bottom: 5px;
 }
 
-/* 8. 갤러리 그리드 */
+/* 7. 지도 및 갤러리 */
+.map-container, .gallery-item img {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
 .gallery-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 16px; /* 사진 모서리도 둥글게 */
-    transition: transform 0.4s ease;
+    width: 100%; height: 250px; object-fit: cover;
+    transition: filter 0.3s;
 }
-.gallery-item:hover img { transform: scale(1.03); }
+.gallery-item:hover img {
+    filter: brightness(0.9); /* 호버 시 살짝 어두워짐 */
+}
+
+/* 8. 애니메이션 */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeInUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; /* 애플 스타일의 부드러운 가속도 */
+    opacity: 0;
+}
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
 
 /* 9. 푸터 */
 .footer {
     text-align: center;
-    padding: 50px 0;
+    padding: 60px 0;
     color: #86868b;
-    font-size: 0.9em;
-    margin-top: 40px;
+    border-top: 1px solid #e5e5e5;
+    background-color: white;
 }
