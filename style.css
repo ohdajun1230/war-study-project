@@ -1,53 +1,117 @@
-/* --- style.css 맨 아래에 추가하세요 --- */
+/* style.css - Premium Modern Style (Final) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-/* 서브 페이지용 헤더 (홈 화면 말고 다른 페이지용) */
-.page-header {
-    padding-top: 120px; /* 네비게이션 바 높이만큼 띄움 */
-    padding-bottom: 60px;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+:root {
+    --bg-color: #f2f4f6;       /* 배경: 쿨그레이 */
+    --text-primary: #191f28;   /* 글씨: 진한 검정 */
+    --text-secondary: #8b95a1; /* 글씨: 회색 */
+    --accent-blue: #3182f6;    /* 포인트: 토스 블루 */
+    --card-bg: #ffffff;        /* 카드: 흰색 */
+    --nav-bg: rgba(255, 255, 255, 0.8);
 }
 
-.page-title {
-    font-size: 48px;
-    font-weight: 800;
+* { box-sizing: border-box; }
+
+body {
+    margin: 0; padding: 0;
+    font-family: "Pretendard Variable", -apple-system, sans-serif;
+    background-color: var(--bg-color);
     color: var(--text-primary);
-    margin-bottom: 16px;
-    letter-spacing: -1px;
-}
-
-.page-desc {
-    font-size: 18px;
-    color: var(--text-secondary);
     line-height: 1.6;
+    word-break: keep-all;
 }
 
-/* 서브 페이지 콘텐츠 박스 */
-.content-box {
-    background: white;
-    border-radius: 30px;
-    padding: 60px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-    margin-bottom: 40px;
-}
+a { text-decoration: none; color: inherit; transition: all 0.2s ease; }
+ul { list-style: none; padding: 0; margin: 0; }
 
-/* 타임라인 스타일 (Project 페이지용) */
+/* 네비게이션 */
+.nav {
+    position: fixed; top: 0; width: 100%; height: 60px;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex; justify-content: center; align-items: center;
+}
+.nav-container {
+    width: 100%; max-width: 1200px; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.logo { font-weight: 800; font-size: 18px; letter-spacing: -0.5px; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { font-size: 15px; font-weight: 600; color: var(--text-secondary); }
+.nav-links a:hover { color: var(--text-primary); }
+
+/* 히어로 섹션 */
+.hero {
+    position: relative; height: 100vh;
+    background-color: #191f28; color: white;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0 5%; overflow: hidden;
+}
+.hero-content { z-index: 2; max-width: 800px; animation: fadeInUp 1s forwards; }
+.hero h1 { font-size: 60px; font-weight: 800; margin: 0 0 20px 0; line-height: 1.1; }
+.hero p { font-size: 20px; color: rgba(255,255,255,0.8); margin-bottom: 40px; }
+.cta-btn {
+    padding: 16px 32px; background: white; color: #191f28;
+    border-radius: 50px; font-weight: 700; font-size: 16px;
+}
+.cta-btn:hover { background: var(--accent-blue); color: white; }
+
+/* 섹션 공통 */
+.section { padding: 120px 24px; max-width: 1200px; margin: 0 auto; }
+.page-header { padding-top: 120px; padding-bottom: 60px; text-align: center; }
+.page-title { font-size: 48px; font-weight: 800; margin-bottom: 16px; }
+.page-desc { font-size: 18px; color: var(--text-secondary); }
+
+/* 벤토 그리드 & 카드 */
+.bento-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 360px); gap: 24px;
+}
+.card {
+    background: var(--card-bg); border-radius: 30px; padding: 40px;
+    position: relative; display: flex; flex-direction: column; justify-content: space-between;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04); transition: transform 0.3s; overflow: hidden;
+}
+.card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); z-index: 10; }
+.col-span-2 { grid-column: span 2; }
+.row-span-2 { grid-row: span 2; }
+.card-dark { background: #191f28; color: white; }
+.card-tag { font-size: 13px; font-weight: 700; color: var(--accent-blue); margin-bottom: 10px; text-transform: uppercase; }
+.card h3 { font-size: 28px; font-weight: 700; margin: 0; z-index: 2; }
+.card p { font-size: 16px; color: var(--text-secondary); margin-top: 10px; z-index: 2; }
+.card-link-icon {
+    width: 40px; height: 40px; background: #f2f4f6; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin-top: auto;
+}
+.card-bg-img {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover; opacity: 0; transition: opacity 0.4s; z-index: 0;
+}
+.card:hover .card-bg-img { opacity: 0.15; }
+
+/* 콘텐츠 박스 & 타임라인 */
+.content-box { background: white; border-radius: 30px; padding: 60px; margin-bottom: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.04); }
 .timeline { border-left: 2px solid #e5e8eb; margin-left: 10px; padding-left: 30px; }
 .timeline-item { position: relative; margin-bottom: 40px; }
 .timeline-item::before {
     content: ''; position: absolute; left: -37px; top: 6px;
-    width: 12px; height: 12px; background: white;
-    border: 3px solid var(--accent-blue); border-radius: 50%;
+    width: 12px; height: 12px; background: white; border: 3px solid var(--accent-blue); border-radius: 50%;
 }
-.timeline-date {
-    display: inline-block; padding: 4px 10px;
-    background: #f2f4f6; color: var(--text-secondary);
-    border-radius: 6px; font-size: 13px; font-weight: 700; margin-bottom: 8px;
-}
+.timeline-date { background: #f2f4f6; padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 700; display: inline-block; margin-bottom: 8px; }
 
-/* 반응형 테이블 (자료실용) */
-table { width: 100%; border-collapse: collapse; }
-th, td { padding: 16px; text-align: left; border-bottom: 1px solid #f2f4f6; }
-th { color: var(--text-secondary); font-weight: 600; font-size: 14px; }
-td { color: var(--text-primary); }
+/* 애니메이션 */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.fade-in-scroll { opacity: 0; transition: opacity 1s, transform 1s; transform: translateY(30px); }
+.fade-in-scroll.visible { opacity: 1; transform: translateY(0); }
+
+/* 푸터 */
+.footer { padding: 80px 0; text-align: center; color: var(--text-secondary); border-top: 1px solid #e5e8eb; }
+
+/* 반응형 */
+@media (max-width: 1024px) {
+    .bento-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .col-span-2, .row-span-2 { grid-column: span 1; grid-row: span 1; }
+    .card { min-height: 300px; }
+    .hero h1 { font-size: 40px; }
+}
