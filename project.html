@@ -3,100 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프로젝트 전체 보기 - 졸업 프로젝트</title>
+    <title>프로젝트 전체 보기</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="header">
-        <h1 class="fade-in">프로젝트 아카이브</h1>
-        <p class="fade-in delay-1">기획부터 결과까지의 모든 과정을 담았습니다.</p>
-    </header>
-
-    <nav class="nav fade-in delay-2">
-        <a href="index.html">홈</a>
-        <a href="about.html">나의 소개</a>
-        <a href="project.html">프로젝트</a>
-        <a href="gallery.html">갤러리</a>
-        <a href="map.html">지도</a>  
-        <a href="resources.html">자료실</a>
-        <a href="guestbook.html">방명록</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">WAR & PEACE</a>
+            <div class="nav-links">
+                <a href="about.html">소개</a>
+                <a href="project.html">프로젝트</a>
+                <a href="gallery.html">갤러리</a>
+                <a href="map.html">지도</a>
+                <a href="resources.html">자료실</a>
+                <a href="guestbook.html">방명록</a>
+            </div>
+        </div>
     </nav>
 
-    <main class="container">
-        
-        <div class="apple-card fade-in delay-3">
-            <h3>📖 목차 (Table of Contents)</h3>
-            <ul>
-                <li><a href="#section1">1. 프로젝트 소개 (개요 및 목표)</a></li>
-                <li><a href="#section2">2. 진행 과정 (Timeline)</a></li>
-                <li><a href="#section3">3. 프로젝트 내용 (현장 방문 기록)</a></li>
-                <li><a href="#section4">4. 결과 및 배운 점</a></li>
-            </ul>
-        </div>
+    <header class="page-header fade-in-scroll">
+        <h1 class="page-title">Project Timeline</h1>
+        <p class="page-desc">기획부터 답사, 그리고 결과물 제작까지의 여정입니다.</p>
+    </header>
 
-        <div id="section1" class="apple-card fade-in">
-            <h2>1. 프로젝트 소개</h2>
-            <h3>주제 선정 배경</h3>
-            <p>
-                [여기에 왜 '전쟁'과 '현장 방문'이라는 주제를 선정했는지에 대한 
-                배경을 작성하세요. 예: 책으로만 배우던 역사의 한계를 느끼고...]
-            </p>
-            <h3>프로젝트 목표</h3>
-            <p>본 프로젝트의 목표는 다음과 같습니다.</p>
-            <ul>
-                <li>첫째, [첫 번째 목표]</li>
-                <li>둘째, [두 번째 목표]</li>
-                <li>셋째, [세 번째 목표]</li>
-            </ul>
-        </div>
-
-        <div id="section2" class="apple-card fade-in">
-            <h2>2. 진행 과정</h2>
+    <main class="section fade-in-scroll">
+        <div class="content-box">
             <div class="timeline">
                 <div class="timeline-item">
-                    <span class="timeline-date">1단계</span>
-                    <strong>주제 선정 및 자료 조사</strong>
-                    <p>관련 도서 리서치 및 방문지 선정</p>
+                    <span class="timeline-date">Phase 1</span>
+                    <h3>주제 선정 및 자료 조사</h3>
+                    <p>관련 도서 리서치 및 방문할 현장 리스트업을 진행했습니다.</p>
                 </div>
                 <div class="timeline-item">
-                    <span class="timeline-date">2단계</span>
-                    <strong>1차 현장 방문</strong>
-                    <p>현장 답사 및 인터뷰 진행</p>
+                    <span class="timeline-date">Phase 2</span>
+                    <h3>1차 현장 답사 (용산)</h3>
+                    <p>전쟁기념관을 방문하여 한국전쟁의 발발 배경을 심층 탐구했습니다.</p>
                 </div>
                 <div class="timeline-item">
-                    <span class="timeline-date">3단계</span>
-                    <strong>결과물 제작</strong>
-                    <p>홈페이지 제작 및 보고서 작성</p>
+                    <span class="timeline-date">Phase 3</span>
+                    <h3>2차 현장 답사 (철원/DMZ)</h3>
+                    <p>분단의 현장을 직접 방문하여 평화의 소중함을 기록했습니다.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Phase 4</span>
+                    <h3>최종 결과물 제작</h3>
+                    <p>수집한 자료를 바탕으로 웹사이트를 구축하고 보고서를 작성했습니다.</p>
                 </div>
             </div>
         </div>
-
-        <div id="section3" class="apple-card fade-in">
-            <h2>3. 프로젝트 내용</h2>
-            <p>주요 현장 방문 기록을 사진과 함께 정리하였습니다.</p>
-            
-            <hr style="border: 0; border-top: 1px dashed #eee; margin: 30px 0;">
-
-            <h3>📍 [첫 번째 방문지 이름]</h3>
-            <p><strong>위치:</strong> 서울 용산구 / <strong>방문일:</strong> 2025.10.15</p>
-            <br>
-            <p>[방문 후기 및 느낀 점을 이곳에 자세히 작성하세요.]</p>
-        </div>
-
-        <div id="section4" class="apple-card fade-in">
-            <h2>4. 결과 및 배운 점</h2>
-            <p>이번 프로젝트를 통해 전쟁의 역사적 의미를 되새기고...</p>
-        </div>
-
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2025 [다준]. 졸업 프로젝트. All Rights Reserved.</p>
-    </footer>
-
+    <footer class="footer"><p>2025 [다준] 졸업 프로젝트.</p></footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
