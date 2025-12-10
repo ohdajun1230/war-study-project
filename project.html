@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>프로젝트 전체 보기 - 졸업 프로젝트</title>
     <link rel="stylesheet" href="style.css">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
@@ -13,11 +12,11 @@
 <body>
 
     <header class="header">
-        <h1>전쟁 현장 방문 기록 졸업 프로젝트</h1>
-        <p>역사를 공부하고, 현장을 직접 방문하여 기록하다.</p>
+        <h1 class="fade-in">프로젝트 아카이브</h1>
+        <p class="fade-in delay-1">기획부터 결과까지의 모든 과정을 담았습니다.</p>
     </header>
 
-    <nav class="nav">
+    <nav class="nav fade-in delay-2">
         <a href="index.html">홈</a>
         <a href="about.html">나의 소개</a>
         <a href="project.html">프로젝트</a>
@@ -27,10 +26,9 @@
     </nav>
 
     <main class="container">
-        <h2>프로젝트 전체 보기</h2>
         
-        <div class="toc">
-            <h3>📖 목차</h3>
+        <div class="apple-card fade-in delay-3">
+            <h3>📖 목차 (Table of Contents)</h3>
             <ul>
                 <li><a href="#section1">1. 프로젝트 소개 (개요 및 목표)</a></li>
                 <li><a href="#section2">2. 진행 과정 (Timeline)</a></li>
@@ -39,173 +37,59 @@
             </ul>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
-
-        <section id="section1">
-            <h3>1. 프로젝트 소개</h3>
-            
-            <h4>주제 선정 배경</h4>
+        <div id="section1" class="apple-card fade-in">
+            <h2>1. 프로젝트 소개</h2>
+            <h3>주제 선정 배경</h3>
             <p>
                 [여기에 왜 '전쟁'과 '현장 방문'이라는 주제를 선정했는지에 대한 
                 배경을 작성하세요. 예: 책으로만 배우던 역사의 한계를 느끼고...]
             </p>
-
-            <h4>프로젝트 목표</h4>
+            <h3>프로젝트 목표</h3>
             <p>본 프로젝트의 목표는 다음과 같습니다.</p>
             <ul>
-                <li>첫째, [첫 번째 목표. 예: 전쟁의 역사적 사실을 심층적으로 이해한다.]</li>
-                <li>둘째, [두 번째 목표. 예: 관련 현장을 직접 방문하여 이론과 실제를 비교 분석한다.]</li>
-                <li>셋째, [세 번째 목표. 예: 방문 기록을 디지털 아카이브(홈페이지)로 구축하여 공유한다.]</li>
+                <li>첫째, [첫 번째 목표]</li>
+                <li>둘째, [두 번째 목표]</li>
+                <li>셋째, [세 번째 목표]</li>
             </ul>
+        </div>
 
-            <h4>프로젝트 범위</h4>
-            <p>
-                본 프로젝트는 [연구 대상이 되는 특정 전쟁이나 시기]을 중심으로 하며, 
-                방문 현장은 [주요 방문지 예: 서울, 철원, 부산 등]에 위치한 
-                [장소 유형 예: 전쟁 기념관, 격전지, 박물관 등]으로 한정합니다.
-            </p>
-        </section>
-
-     <section id="section2">
-            <h3>2. 프로젝트 진행 과정</h3>
-            <p>프로젝트는 다음과 같은 타임라인으로 진행되었습니다.</p>
-
+        <div id="section2" class="apple-card fade-in">
+            <h2>2. 진행 과정</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">202X년 MM월 ~ MM월</span>
-                        <h4>1단계: 주제 선정 및 자료 조사</h4>
-                        <p>
-                            - 관련 도서 및 논문 리서치<br>
-                            - 방문할 현장 리스트업<br>
-                            - 선생님과의 1차 면담
-                        </p>
-                    </div>
+                    <span class="timeline-date">1단계</span>
+                    <strong>주제 선정 및 자료 조사</strong>
+                    <p>관련 도서 리서치 및 방문지 선정</p>
                 </div>
-
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">202X년 MM월 ~ MM월</span>
-                        <h4>2단계: 1차 현장 방문</h4>
-                        <p>
-                            - [방문지 1] 방문 및 사진 촬영<br>
-                            - 현장 관계자 인터뷰 시도<br>
-                            - 방문 기록 초안 작성
-                        </p>
-                    </div>
+                    <span class="timeline-date">2단계</span>
+                    <strong>1차 현장 방문</strong>
+                    <p>현장 답사 및 인터뷰 진행</p>
                 </div>
-
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">202X년 MM월 ~ MM월</span>
-                        <h4>3단계: 심화 조사 및 2차 방문</h4>
-                        <p>
-                            - [방문지 3] 추가 방문<br>
-                            - 자료 교차 검증 및 보완
-                        </p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">202X년 MM월 ~ MM월</span>
-                        <h4>4단계: 결과물 제작 (현재)</h4>
-                        <p>
-                            - 홈페이지 기획 및 제작 (HTML/CSS)<br>
-                            - 최종 보고서 작성 완료
-                        </p>
-                    </div>
+                    <span class="timeline-date">3단계</span>
+                    <strong>결과물 제작</strong>
+                    <p>홈페이지 제작 및 보고서 작성</p>
                 </div>
             </div>
-        </section>
-        
-        <section id="section3">
-            <h3>3. 프로젝트 내용 (현장 방문 기록)</h3>
-            <p>
-                주요 현장 방문 기록을 정리하였습니다. 
-                각 현장의 배경, 방문 기록(사진), 느낀 점을 중심으로 서술합니다.
-            </p>
+        </div>
 
-            <h4>3-1. [첫 번째 방문 현장 이름] (예: 용산 전쟁기념관)</h4>
-            <h5>가. 역사적 배경 및 개요</h5>
-            <p>
-                [이곳에 현장의 역사적 사실, 설립 목적 등을 조사한 내용을 작성합니다.]
-            </p>
+        <div id="section3" class="apple-card fade-in">
+            <h2>3. 프로젝트 내용</h2>
+            <p>주요 현장 방문 기록을 사진과 함께 정리하였습니다.</p>
             
-            <h5>나. 현장 방문 기록 및 사진</h5>
-            <p>
-                [이곳에 현장을 방문하며 직접 보고 들은 내용을 작성합니다.]
-            </p>
-            <p>
-                [사진에 대한 부가 설명을 작성합니다.]
-            </p>
+            <hr style="border: 0; border-top: 1px dashed #eee; margin: 30px 0;">
 
-            <h5>다. 느낀 점</h5>
-            <p>
-                [이 현장을 방문하고 개인적으로 느낀 점이나 인상 깊었던 부분을 작성합니다.]
-            </p>
+            <h3>📍 [첫 번째 방문지 이름]</h3>
+            <p><strong>위치:</strong> 서울 용산구 / <strong>방문일:</strong> 2025.10.15</p>
+            <br>
+            <p>[방문 후기 및 느낀 점을 이곳에 자세히 작성하세요.]</p>
+        </div>
 
-            <hr style="border-top: 1px dashed #eee; margin: 30px 0;">
-
-            <h4>3-2. [두 번째 방문 현장 이름] (예: 철원 노동당사)</h4>
-            <h5>가. 역사적 배경 및 개요</h5>
-            <p>
-                [조사한 내용 작성]
-            </p>
-            
-            <h5>나. 현장 방문 기록 및 사진</h5>
-            <p>
-                [방문 기록 작성]
-            </p>
-            <h5>다. 느낀 점</h5>
-            <p>
-                [느낀 점 작성]
-            </p>
-        </section>
-
-        <br><br>
-
-        <section id="section4">
-            <h3>4. 결과 및 배운 점</h3>
-
-            <h4>프로젝트를 통해 배우게 된 점</h4>
-            <p>
-                이번 졸업 프로젝트를 진행하며 다음과 같은 점들을 배울 수 있었습니다.
-            </p>
-            <ul>
-                <li>
-                    <strong>역사적 통찰:</strong> 
-                    [책으로만 보던 역사와 실제 현장에서 느낀 점의 차이를 작성. 
-                    예: 전쟁의 참혹함을 피부로 느낌...]
-                </li>
-                <li>
-                    <strong>기록의 중요성:</strong>
-                    [현장을 기록하고 정리하는 과정의 중요성을 작성. 
-                    예: 잊히기 쉬운 역사를 디지털로 보존하는...]
-                </li>
-                <li>
-                    <strong>기술적 성장:</strong>
-                    [홈페이지를 직접 만들면서 배운 점. 
-                    예: HTML/CSS를 활용하여...]
-                </li>
-            </ul>
-
-            <h4>결론 및 제언</h4>
-            <p>
-                [프로젝트 전체를 요약하는 결론을 작성합니다.]
-            </p>
-            <p>
-                [프로젝트의 한계점이나 아쉬웠던 점, 그리고 앞으로의 
-                향후 계획(후속 연구 등)이 있다면 작성합니다.]
-            </p>
-
-            <h4>참고 문헌</h4>
-            <ul>
-                <li>[참고한 책 제목] (저자, 출판사, 연도)</li>
-                <li>[참고한 논문 제목] (저자, 학술지, 연도)</li>
-                <li>[참고한 웹사이트 이름] (웹 주소)</li>
-            </ul>
-        </section>
+        <div id="section4" class="apple-card fade-in">
+            <h2>4. 결과 및 배운 점</h2>
+            <p>이번 프로젝트를 통해 전쟁의 역사적 의미를 되새기고...</p>
+        </div>
 
     </main>
 
