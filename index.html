@@ -3,86 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전쟁과 평화 - 졸업 프로젝트</title>
+    <title>War & Peace: 현장 기록 프로젝트</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="global-nav">
-        <div class="nav-content">
-            <a href="index.html" style="font-weight: 600;"> Project</a>
-            <a href="about.html">소개</a>
-            <a href="project.html">프로젝트</a>
-            <a href="gallery.html">갤러리</a>
-            <a href="map.html">지도</a>
-            <a href="resources.html">자료실</a>
-            <a href="guestbook.html">방명록</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">WAR & PEACE</a>
+            <div class="nav-links">
+                <a href="about.html">소개</a>
+                <a href="project.html">프로젝트</a>
+                <a href="gallery.html">갤러리</a>
+                <a href="map.html">지도</a>
+                <a href="resources.html">자료실</a>
+            </div>
         </div>
     </nav>
 
-    <section class="hero-section">
-        <div class="hero-bg" style="background-image: url('images/main_bg.jpg');"></div>
-        
-        <div class="hero-content">
-            <h1 class="hero-title">기억의 현장, 평화를 걷다.</h1>
-            <p class="hero-desc">전쟁의 아픔을 딛고 평화로 나아가는 여정.</p>
+    <header class="hero">
+        <div class="hero-bg"></div> <div class="hero-content">
+            <div class="hero-label">2025 Graduation Project</div>
+            <h1>기록되지 않은 역사는<br>반복됩니다.</h1>
+            <p>전쟁의 아픔이 서린 현장을 직접 방문하고,<br>평화의 가치를 다시금 새기는 기록의 여정.</p>
+            <a href="project.html" class="cta-btn">프로젝트 시작하기</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section-header fade-in-scroll">
+            <h2 class="section-title">프로젝트 하이라이트</h2>
+            <p class="section-desc">우리가 걸어온 길과 기록들을 한눈에 확인하세요.</p>
+        </div>
+
+        <div class="bento-grid">
             
-            <div class="hero-links">
-                <a href="project.html" class="cta-button">프로젝트 더 알아보기</a>
-                <a href="map.html" class="text-link" style="color:#5ec5ff;">지도 보기</a>
-            </div>
+            <a href="project.html" class="card col-span-2 card-dark fade-in-scroll">
+                <div>
+                    <div class="card-tag">Overview</div>
+                    <h3>프로젝트 전체 보기</h3>
+                    <p>기획 의도부터 현장 답사 과정, 그리고 최종 결론까지.<br>우리의 모든 여정을 담았습니다.</p>
+                </div>
+                <div class="card-link-icon">→</div>
+                <img src="images/project_thumb.jpg" class="card-bg-img" alt="">
+            </a>
+
+            <a href="map.html" class="card row-span-2 fade-in-scroll">
+                <div>
+                    <div class="card-tag">Location Map</div>
+                    <h3>현장 방문 지도</h3>
+                    <p>용산 전쟁기념관에서<br>철원 노동당사까지.<br>지도로 보는 답사 경로.</p>
+                </div>
+                <div class="card-link-icon">📍</div>
+                <img src="images/map_thumb.jpg" class="card-bg-img" alt="">
+            </a>
+
+            <a href="gallery.html" class="card fade-in-scroll">
+                <div>
+                    <div class="card-tag">Gallery</div>
+                    <h3>현장의 기록</h3>
+                    <p>글로 다 담지 못한<br>생생한 사진들.</p>
+                </div>
+                <div class="card-link-icon">📸</div>
+                <img src="images/photo1.jpg" class="card-bg-img" alt="">
+            </a>
+
+            <a href="resources.html" class="card fade-in-scroll">
+                <div>
+                    <div class="card-tag">Archive</div>
+                    <h3>자료실</h3>
+                    <p>발표 자료 및 보고서<br>다운로드.</p>
+                </div>
+                <div class="card-link-icon">💾</div>
+            </a>
+
+            <a href="guestbook.html" class="card col-span-2 fade-in-scroll">
+                <div>
+                    <div class="card-tag">Guestbook</div>
+                    <h3>방문자 방명록</h3>
+                    <p>여러분의 소중한 의견과 피드백을 남겨주세요.<br>작은 관심이 큰 힘이 됩니다.</p>
+                </div>
+                <div class="card-link-icon">💬</div>
+            </a>
+
         </div>
-    </section>
-
-    <section class="grid-container">
-
-        <div class="card dark-theme">
-            <div class="card-category">Overview</div>
-            <h2 class="card-title">프로젝트 소개</h2>
-            <p class="card-desc">왜 우리는 현장으로 떠났는가?<br>기획 의도와 목표.</p>
-            <div class="hero-links" style="margin-bottom: 20px;">
-                <a href="project.html" class="text-link">더 알아보기</a>
-            </div>
-            <div class="card-image-area" style="background-image: url('images/project_thumb.jpg');"></div>
-        </div>
-
-        <div class="card">
-            <div class="card-category">Gallery</div>
-            <h2 class="card-title">현장의 기록</h2>
-            <p class="card-desc">글로 다 담지 못한<br>생생한 순간들.</p>
-            <div class="hero-links" style="margin-bottom: 20px;">
-                <a href="gallery.html" class="text-link">사진첩 열기</a>
-            </div>
-            <div class="card-image-area" style="background-image: url('images/photo1.jpg');"></div>
-        </div>
-
-        <div class="card">
-            <div class="card-category">Location</div>
-            <h2 class="card-title">방문 지도</h2>
-            <p class="card-desc">용산에서 철원까지,<br>우리의 발자취.</p>
-            <div class="hero-links" style="margin-bottom: 20px;">
-                <a href="map.html" class="text-link">지도 확인하기</a>
-            </div>
-            <div class="card-image-area" style="background-image: url('images/map_thumb.jpg');"></div>
-        </div>
-
-        <div class="card">
-            <div class="card-category">Resources & Guestbook</div>
-            <h2 class="card-title">소통과 공유</h2>
-            <p class="card-desc">보고서 다운로드 및<br>방명록 작성.</p>
-            <div class="hero-links" style="margin-bottom: 20px;">
-                <a href="resources.html" class="text-link">자료실</a>
-                <a href="guestbook.html" class="text-link" style="margin-left:15px;">방명록</a>
-            </div>
-            <div class="card-image-area" style="background-color: #f0f0f0;"></div>
-        </div>
-
     </section>
 
     <footer class="footer">
-        <p>Copyright © 2025 다준. All rights reserved.</p>
-        <p>본 사이트는 졸업 프로젝트 목적으로 제작되었습니다.</p>
+        <h3>WAR & PEACE</h3>
+        <p>2025 [다준] 졸업 프로젝트 Archive.<br>Designed inspired by Apple & Toss.</p>
     </footer>
+
+    <script>
+        // 스크롤하면 요소가 부드럽게 나타나는 효과
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
+    </script>
 
 </body>
 </html>
