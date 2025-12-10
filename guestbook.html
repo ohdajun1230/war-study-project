@@ -2,66 +2,54 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>방명록 - 졸업 프로젝트</title>
+    <title>방명록</title>
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="header">
-        <h1 class="fade-in">방명록</h1>
-        <p class="fade-in delay-1">방문해주셔서 감사합니다. 소중한 의견을 남겨주세요.</p>
-    </header>
-
-    <nav class="nav fade-in delay-2">
-        <a href="index.html">홈</a>
-        <a href="about.html">나의 소개</a>
-        <a href="project.html">프로젝트</a>
-       <a href="gallery.html">갤러리</a>
-        <a href="map.html">지도</a>  
-        <a href="resources.html">자료실</a>
-        <a href="guestbook.html">방명록</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">WAR & PEACE</a>
+            <div class="nav-links">
+                <a href="about.html">소개</a>
+                <a href="project.html">프로젝트</a>
+                <a href="gallery.html">갤러리</a>
+                <a href="map.html">지도</a>
+                <a href="resources.html">자료실</a>
+                <a href="guestbook.html">방명록</a>
+            </div>
+        </div>
     </nav>
 
-    <main class="container">
-        
-        <div class="apple-card fade-in delay-3">
-            <h2>💬 Guestbook</h2>
-            <p>
-                프로젝트를 보시고 느낀 점이나 응원의 메시지를 자유롭게 남겨주세요.<br>
-                GitHub 계정으로 로그인하여 작성할 수 있습니다.
-            </p>
-            
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
-            
-            <div style="margin-top: 20px;">
-                <script src="https://giscus.app/client.js"
-                        data-repo="ohdajun1230/war-study-project"
-                        data-repo-id="R_kgDOQdHZSA"
-                        data-category="General"
-                        data-category-id="DIC_kwDOQdHZSM4Czmjq"
-                        data-mapping="pathname"
-                        data-strict="0"
-                        data-reactions-enabled="1"
-                        data-emit-metadata="0"
-                        data-input-position="bottom"
-                        data-theme="noborder_light"
-                        data-lang="ko"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-                </div>
+    <header class="page-header fade-in-scroll">
+        <h1 class="page-title">Guestbook</h1>
+        <p class="page-desc">소중한 의견과 응원의 한마디를 남겨주세요.</p>
+    </header>
+
+    <main class="section fade-in-scroll">
+        <div class="content-box">
+            <script src="https://giscus.app/client.js"
+                data-repo="ohdajun1230/war-study-project"
+                data-repo-id="R_kgDOQdHZSA"
+                data-category="General"
+                data-category-id="DIC_kwDOQdHZSM4Czmjq"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="noborder_light"
+                data-lang="ko"
+                crossorigin="anonymous"
+                async>
+            </script>
         </div>
-
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2025 [다준]. 졸업 프로젝트. All Rights Reserved.</p>
-    </footer>
-
+    <footer class="footer"><p>2025 [다준] 졸업 프로젝트.</p></footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
