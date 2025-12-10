@@ -1,205 +1,213 @@
-/* style.css (Apple Bento Grid Style) */
+/* style.css - Apple Korea Style Clone */
 
-/* 1. 폰트 및 기본 설정 (Pretendard) */
+/* 1. 폰트 및 리셋 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 :root {
-    --bg-color: #f5f5f7;
-    --text-main: #1d1d1f;
-    --text-sub: #86868b;
-    --card-bg: #ffffff;
-    --accent: #0066CC; /* Apple Blue */
+    --bg-color: #f5f5f7;       /* 애플 사이트 배경색 (연회색) */
+    --card-bg: #ffffff;        /* 카드 배경색 (흰색) */
+    --text-head: #1d1d1f;      /* 진한 검정 텍스트 */
+    --text-body: #86868b;      /* 회색 텍스트 */
+    --accent: #0066CC;         /* 애플 블루 (링크 색상) */
+    --nav-bg: rgba(22, 22, 23, 0.8); /* 상단 네비게이션 (반투명 블랙) */
 }
 
 body {
-    font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
     margin: 0;
     padding: 0;
-    line-height: 1.5;
-    overflow-x: hidden; /* 가로 스크롤 방지 */
+    font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-head);
+    line-height: 1.4;
+    overflow-x: hidden;
 }
 
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
 ul { list-style: none; padding: 0; margin: 0; }
 
-/* 2. 네비게이션 (상단 고정, 유리 효과) */
-.nav {
-    position: sticky;
+/* 2. 글로벌 네비게이션 (Apple Global Nav) */
+.global-nav {
+    position: fixed;
     top: 0;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.7);
+    left: 0;
+    width: 100%;
+    height: 48px; /* 애플 GNB 표준 높이 */
+    background-color: var(--nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    z-index: 9999;
     display: flex;
     justify-content: center;
-    padding: 15px 0;
+    align-items: center;
 }
 
-.nav-links {
+.nav-content {
     display: flex;
-    gap: 30px;
-}
-
-.nav a {
+    gap: 40px; /* 메뉴 간격 */
     font-size: 12px;
     font-weight: 400;
-    color: var(--text-main);
+    color: #f5f5f7; /* 흰색 글씨 */
     opacity: 0.8;
-    transition: opacity 0.2s;
 }
 
-.nav a:hover { opacity: 1; color: var(--accent); }
-
-/* 3. 메인 타이틀 영역 (Hero Section) */
-.hero {
-    text-align: center;
-    padding: 100px 20px 60px;
-    max-width: 1000px;
-    margin: 0 auto;
+.nav-content a:hover {
+    opacity: 1;
+    color: #ffffff;
 }
 
-.hero h1 {
-    font-size: 56px; /* 아주 큰 제목 */
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-}
-
-.hero p {
-    font-size: 24px;
-    color: var(--text-sub);
-    font-weight: 500;
-}
-
-/* 4. 벤토 그리드 레이아웃 (핵심 디자인) */
-.bento-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 모바일 기본 */
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto 100px;
-}
-
-/* 태블릿 이상 (2열) */
-@media (min-width: 768px) {
-    .bento-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    /* 특정 카드는 2칸 차지하게 (Apple 스타일) */
-    .span-2 { grid-column: span 2; } 
-}
-
-/* 데스크탑 이상 (3열) */
-@media (min-width: 1024px) {
-    .bento-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .span-2 { grid-column: span 2; }
-    .span-3 { grid-column: span 3; }
-}
-
-/* 5. 카드 디자인 (Bento Box) */
-.card {
-    background-color: var(--card-bg);
-    border-radius: 30px; /* 둥근 모서리 */
-    overflow: hidden;
+/* 3. 히어로 섹션 (압도적인 첫 화면) */
+.hero-section {
     position: relative;
+    width: 100%;
+    height: 90vh; /* 화면의 90% 높이 */
+    background-color: #000; /* 검정 배경 (제품 강조형) */
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 40px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s;
-    min-height: 350px; /* 카드 기본 높이 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.card:hover {
-    transform: scale(1.02); /* 살짝 커지는 효과 */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    z-index: 10;
-}
-
-/* 카드 내부 텍스트 */
-.card-content {
+.hero-content {
     z-index: 2;
+    padding: 20px;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
-.eyebrow {
-    font-size: 14px;
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.hero-desc {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cta-button {
+    background-color: #0071e3; /* 애플 블루 버튼 */
+    color: white;
+    padding: 10px 22px;
+    border-radius: 980px; /* 알약 모양 */
+    font-size: 15px;
     font-weight: 600;
-    color: var(--text-sub);
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    display: block;
+}
+.cta-button:hover { background-color: #0077ed; }
+
+.text-link {
+    color: #2997ff;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.text-link::after { content: " ›"; margin-left: 5px; font-size: 18px; }
+.text-link:hover { text-decoration: underline; }
+
+/* 배경 영상/이미지 효과 */
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.4; /* 글씨 잘 보이게 어둡게 처리 */
+    z-index: 1;
 }
 
-.card h3 {
+/* 4. 그리드 레이아웃 (Bento Grid) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* 반응형 그리드 */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+/* 개별 카드 디자인 */
+.card {
+    background-color: var(--card-bg);
+    height: 500px; /* 카드 높이 고정 */
+    border-radius: 28px; /* 애플 특유의 둥근 모서리 */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.card:hover { transform: scale(1.02); z-index: 10; }
+
+/* 카드 텍스트 */
+.card-category {
+    font-size: 12px;
+    font-weight: 600;
+    color: #86868b; /* 회색 */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card-title {
     font-size: 32px;
     font-weight: 700;
-    margin: 0 0 15px 0;
-    color: var(--text-main);
+    color: #1d1d1f;
+    margin: 0 0 10px 0;
 }
 
-.card p {
+.card-desc {
     font-size: 17px;
-    color: var(--text-sub);
-    line-height: 1.6;
+    color: #1d1d1f;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding: 0 20px;
 }
 
-/* 카드 배경 이미지/지도 등 */
-.card-media {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 1;
-    opacity: 0.1; /* 텍스트 잘 보이게 배경 흐리게 (이미지 넣으면 조절 가능) */
+/* 카드 내 이미지 영역 */
+.card-image-area {
+    margin-top: auto; /* 아래로 밀기 */
+    width: 100%;
+    height: 60%;
+    background-color: #fafafa; /* 이미지가 없을 때 회색 배경 */
     background-size: cover;
     background-position: center;
-    transition: opacity 0.3s;
 }
 
-.card:hover .card-media { opacity: 0.2; }
-
-/* 다크 모드 카드 (검정 배경 카드) */
-.card.dark {
-    background-color: #000;
-    color: #fff;
+/* 검정색 테마 카드 (Pro 스타일) */
+.card.dark-theme {
+    background-color: #000000;
 }
-.card.dark h3 { color: #fff; }
-.card.dark .eyebrow { color: #86868b; }
-
-/* 버튼 스타일 (Apple Link) */
-.card-link {
-    margin-top: 20px;
-    display: inline-block;
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 15px;
-}
-.card-link::after { content: " ›"; }
+.card.dark-theme .card-title, 
+.card.dark-theme .card-desc { color: #f5f5f7; }
+.card.dark-theme .card-category { color: #86868b; }
 
 /* 애니메이션 */
-.fade-in {
-    opacity: 0;
-    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(50px); }
+    from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
 
 /* 푸터 */
 .footer {
-    text-align: center;
-    padding: 50px;
-    color: var(--text-sub);
+    background-color: #f5f5f7;
+    color: #86868b;
     font-size: 12px;
-    border-top: 1px solid #e5e5e5;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #d2d2d7;
 }
