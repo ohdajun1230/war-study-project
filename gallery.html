@@ -2,64 +2,54 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>갤러리 - 졸업 프로젝트</title>
+    <title>현장 갤러리</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="header">
-        <h1 class="fade-in">현장 기록 갤러리</h1>
-        <p class="fade-in delay-1">글로 다 담지 못한 생생한 현장의 모습을 전합니다.</p>
-    </header>
-
-    <nav class="nav fade-in delay-2">
-        <a href="index.html">홈</a>
-        <a href="about.html">나의 소개</a>
-        <a href="project.html">프로젝트</a>
-        <a href="gallery.html">갤러리</a>
-        <a href="map.html">지도</a>  
-        <a href="resources.html">자료실</a>
-        <a href="guestbook.html">방명록</a>
-    </nav>
-
-    <main class="container">
-        
-        <div class="apple-card fade-in delay-3">
-            <h2>📸 Photo Log</h2>
-            <p style="margin-bottom: 30px;">방문했던 현장의 주요 사진들을 모았습니다.</p>
-
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/photo1.jpg" alt="사진 설명">
-                    <p style="text-align: center; margin-top: 10px; font-size: 0.9em; color: #666;">용산 전쟁기념관 입구</p>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/photo2.jpg" alt="사진 설명">
-                    <p style="text-align: center; margin-top: 10px; font-size: 0.9em; color: #666;">전시실 내부 모습</p>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/photo3.jpg" alt="사진 설명">
-                    <p style="text-align: center; margin-top: 10px; font-size: 0.9em; color: #666;">철원 노동당사 전경</p>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/photo4.jpg" alt="사진 설명">
-                    <p style="text-align: center; margin-top: 10px; font-size: 0.9em; color: #666;">현장 답사 중</p>
-                </div>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">WAR & PEACE</a>
+            <div class="nav-links">
+                <a href="about.html">소개</a>
+                <a href="project.html">프로젝트</a>
+                <a href="gallery.html">갤러리</a>
+                <a href="map.html">지도</a>
+                <a href="resources.html">자료실</a>
+                <a href="guestbook.html">방명록</a>
             </div>
         </div>
+    </nav>
 
+    <header class="page-header fade-in-scroll">
+        <h1 class="page-title">Photo Gallery</h1>
+        <p class="page-desc">현장에서 직접 촬영한 생생한 기록들입니다.</p>
+    </header>
+
+    <main class="section">
+        <div class="bento-grid fade-in-scroll">
+            <div class="card">
+                <img src="images/photo1.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:12px; margin-bottom:15px;">
+                <h3>용산 전쟁기념관</h3>
+                <p>입구의 조형물</p>
+            </div>
+            <div class="card">
+                <img src="images/photo2.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:12px; margin-bottom:15px;">
+                <h3>철원 노동당사</h3>
+                <p>역사의 상처</p>
+            </div>
+            <div class="card">
+                <img src="images/photo3.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:12px; margin-bottom:15px;">
+                <h3>DMZ 철조망</h3>
+                <p>분단의 현실</p>
+            </div>
+        </div>
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2025 [다준]. 졸업 프로젝트. All Rights Reserved.</p>
-    </footer>
-
+    <footer class="footer"><p>2025 [다준] 졸업 프로젝트.</p></footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
