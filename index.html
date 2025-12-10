@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
-    </head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>졸업 프로젝트: 전쟁 현장 방문 기록</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="header">
-        <h1>전쟁 현장 방문 기록 졸업 프로젝트</h1>
-        <p>역사를 공부하고, 현장을 직접 방문하여 기록하다.</p>
+        <h1 class="fade-in">전쟁 현장 방문 기록</h1>
+        <p class="fade-in delay-1">역사를 공부하고, 현장을 직접 방문하여 기록하다.</p>
     </header>
 
-  <nav class="nav">
+    <nav class="nav fade-in delay-2">
         <a href="index.html">홈</a>
         <a href="about.html">나의 소개</a>
         <a href="project.html">프로젝트</a>
@@ -27,27 +24,40 @@
         <a href="resources.html">자료실</a>
         <a href="guestbook.html">방명록</a>
     </nav>
-    
-    <main class="container">
-        <h2>환영합니다!</h2>
-        <p>
-            본 홈페이지는 전쟁 관련 현장 방문을 통해 
-            역사적 사실을 심화 학습하고, 평화의 가치를 기록한 
-            졸업 프로젝트의 결과물입니다.
-        </p>
-        
-        <h2>최신 기록</h2>
-        <ul>
-            <li><a href="#">[기록 1] OOO 현장 방문 후기 (2025.10.15)</a></li>
-            <li><a href="#">[기록 2] 전쟁 자료 조사 요약</a></li>
-            <li><a href="#">[기록 3] 프로젝트 중간 발표 보고서</a></li>
-        </ul>
 
-        <h2>프로젝트 시작하기</h2>
-        <p>
-            상단의 메뉴 바를 이용하여 각 페이지를 확인해 주세요. 
-            <a href="project_info.html">프로젝트 소개</a> 페이지에서 더 자세한 내용을 볼 수 있습니다.
-        </p>
+    <main class="container">
+        <div class="apple-card fade-in delay-3">
+            <h2>환영합니다! 👋</h2>
+            <p>
+                본 홈페이지는 전쟁 관련 현장 방문을 통해 
+                <strong>역사적 사실을 심화 학습</strong>하고, 
+                <strong>평화의 가치를 기록</strong>한 졸업 프로젝트의 결과물입니다.
+            </p>
+        </div>
+
+        <div class="apple-card fade-in delay-3">
+            <h3>📝 최신 기록</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eee;">
+                    <a href="project.html">📍 [기록 1] 철원 노동당사 방문 후기 (2025.10.15)</a>
+                </li>
+                <li style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eee;">
+                    <a href="project.html">📚 [기록 2] 전쟁 자료 조사 요약</a>
+                </li>
+                <li>
+                    <a href="project.html">📑 [기록 3] 프로젝트 중간 발표 보고서</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="apple-card fade-in delay-3" style="text-align: center;">
+            <h3>프로젝트 시작하기</h3>
+            <p>전체 프로젝트 내용을 확인하시려면 아래 버튼을 눌러주세요.</p>
+            <br>
+            <a href="project.html" style="background: #74b9ff; color: white; padding: 12px 30px; border-radius: 30px; font-weight: bold; box-shadow: 0 5px 15px rgba(116, 185, 255, 0.4);">
+                프로젝트 전체 보기 →
+            </a>
+        </div>
     </main>
 
     <footer class="footer">
