@@ -3,61 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나의 소개 - 졸업 프로젝트</title>
+    <title>나의 소개</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="header">
-        <h1 class="fade-in">나의 소개</h1>
-        <p class="fade-in delay-1">이 프로젝트를 기획하고 진행한 사람을 소개합니다.</p>
-    </header>
-
-    <nav class="nav fade-in delay-2">
-        <a href="index.html">홈</a>
-        <a href="about.html">나의 소개</a>
-        <a href="project.html">프로젝트</a>
-        <a href="gallery.html">갤러리</a>
-        <a href="map.html">지도</a>  
-        <a href="resources.html">자료실</a>
-        <a href="guestbook.html">방명록</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">WAR & PEACE</a>
+            <div class="nav-links">
+                <a href="about.html">소개</a>
+                <a href="project.html">프로젝트</a>
+                <a href="gallery.html">갤러리</a>
+                <a href="map.html">지도</a>
+                <a href="resources.html">자료실</a>
+                <a href="guestbook.html">방명록</a>
+            </div>
+        </div>
     </nav>
 
-    <main class="container">
-        
-        <div class="apple-card fade-in delay-3">
+    <header class="page-header fade-in-scroll">
+        <h1 class="page-title">Creator Profile</h1>
+        <p class="page-desc">이 프로젝트를 기획하고 만든 사람을 소개합니다.</p>
+    </header>
+
+    <main class="section fade-in-scroll">
+        <div class="content-box">
             <h2>🙋‍♂️ 안녕하세요, [다준]입니다.</h2>
-            <p>
+            <p style="margin-top:20px; color:#555;">
                 [학교 이름]에 재학 중이며, 평소 역사와 사회 문제에 깊은 관심을 가지고 있습니다.<br>
                 교과서 속의 텍스트로만 배우는 역사가 아니라, <strong>'현장이 말해주는 역사'</strong>를 듣기 위해 이번 프로젝트를 시작했습니다.
             </p>
             <br>
-            <p>
-                단순한 방문을 넘어, 그곳에 서린 아픔과 평화의 소중함을 기록하고 공유하고자 합니다.
-            </p>
-        </div>
-
-        <div class="apple-card fade-in delay-3">
-            <h3>📬 Contact</h3>
-            <p>프로젝트에 대해 궁금한 점이나 피드백이 있다면 언제든 연락주세요.</p>
-            <ul style="list-style: none; padding: 0; margin-top: 20px;">
-                <li style="margin-bottom: 10px;">
-                    <strong>Email:</strong> <a href="mailto:ohdajun1230@naver.com">ohdajun1230@naver.com</a>
-                </li>
-                <li>
-                    <strong>GitHub:</strong> <a href="https://github.com/ohdajun1230" target="_blank">@ohdajun1230</a>
-                </li>
+            <h3>📩 Contact</h3>
+            <ul style="margin-top:10px; color:#555;">
+                <li>Email: ohdajun1230@naver.com</li>
+                <li>GitHub: @ohdajun1230</li>
             </ul>
         </div>
-
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 [다준]. 졸업 프로젝트. All Rights Reserved.</p>
-    </footer>
-
+    <footer class="footer"><p>2025 [다준] 졸업 프로젝트.</p></footer>
+    <script> /* index.html의 스크립트와 동일하게 넣어주세요 */ 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
