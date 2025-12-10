@@ -8,14 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { color: #74b9ff; font-weight: 600; }
+        td a { font-weight: bold; }
+    </style>
 </head>
 <body>
+
     <header class="header">
-        <h1>전쟁 현장 방문 기록 졸업 프로젝트</h1>
-        <p>프로젝트와 관련된 자료들을 아카이빙합니다.</p>
+        <h1 class="fade-in">자료실</h1>
+        <p class="fade-in delay-1">프로젝트와 관련된 발표 자료 및 보고서를 공유합니다.</p>
     </header>
 
-    <nav class="nav">
+    <nav class="nav fade-in delay-2">
         <a href="index.html">홈</a>
         <a href="about.html">나의 소개</a>
         <a href="project.html">프로젝트</a>
@@ -25,42 +33,48 @@
     </nav>
 
     <main class="container">
-        <h2>📁 프로젝트 자료실</h2>
-        <p>발표 자료(PPT), 보고서(PDF), 참고 문헌 링크 등을 다운로드하거나 확인할 수 있습니다.</p>
+        
+        <div class="apple-card fade-in delay-3">
+            <h2>📁 Archived Files</h2>
+            <p>프로젝트 진행 과정에서 작성된 주요 문서입니다.</p>
 
-        <table class="resource-table">
-            <thead>
-                <tr>
-                    <th style="width: 10%;">번호</th>
-                    <th style="width: 60%;">자료 제목</th>
-                    <th style="width: 15%;">유형</th>
-                    <th style="width: 15%;">링크</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>최종 졸업 프로젝트 보고서</td>
-                    <td>PDF</td>
-                    <td><a href="#">다운로드</a></td> </tr>
-                <tr>
-                    <td>2</td>
-                    <td>중간 발표 프레젠테이션</td>
-                    <td>PPT</td>
-                    <td><a href="#">다운로드</a></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>[참고] OOO 전쟁 관련 다큐멘터리</td>
-                    <td>YouTube</td>
-                    <td><a href="#" target="_blank">보러가기</a></td>
-                </tr>
-            </tbody>
-        </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="10%">No.</th>
+                        <th width="60%">자료 제목</th>
+                        <th width="15%">형식</th>
+                        <th width="15%">다운로드</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>졸업 프로젝트 최종 보고서</td>
+                        <td>PDF</td>
+                        <td><a href="#">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>중간 발표 프레젠테이션</td>
+                        <td>PPTX</td>
+                        <td><a href="#">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>답사 계획표 및 일정</td>
+                        <td>HWP</td>
+                        <td><a href="#">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </main>
 
     <footer class="footer">
         <p>&copy; 2025 [다준]. 졸업 프로젝트. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
