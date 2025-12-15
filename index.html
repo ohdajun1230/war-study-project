@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* ✨ 화살표/아이콘 스타일 (White & Black) */
+        /* ✨ 화살표/아이콘 스타일 */
         .card-link-icon {
-            /* 1. 디자인: 흰색 배경 + 진한 검은색 아이콘 */
+            /* 1. 기본 상태: 흰색 배경 + 검은색 아이콘 */
             background-color: #ffffff;
             color: #000000 !important;
             
@@ -24,28 +24,31 @@
             justify-content: center;
             font-size: 20px;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* 은은한 그림자 */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             z-index: 10;
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 움직임 */
+            transition: all 0.3s ease; /* 부드러운 애니메이션 */
 
-            /* 2. 위치: 왼쪽 아래 고정 */
+            /* 2. 위치: 왼쪽 아래 (Left Bottom) */
             position: absolute;
             bottom: 30px;
             left: 30px;
         }
 
-        /* ✨ 3. 마우스 올렸을 때 효과 (색상 변경 없음!) */
+        /* ✨ 3. 마우스 올렸을 때 효과 (여기를 바꿨습니다!) */
         .card:hover .card-link-icon {
-            /* 배경색, 글자색 변경 없음 (흰색 유지) */
-            background-color: #ffffff; 
-            color: #000000 !important;
+            transform: scale(1.1); /* 살짝 커짐 */
             
-            /* 대신 버튼이 살짝 떠오르는 느낌만 줌 */
-            transform: scale(1.1); 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+            /* 기존 검정(#000) -> '로얄 블루(#2563eb)'로 변경 */
+            background-color: #2563eb; 
+            
+            /* 아이콘은 흰색으로 반전 */
+            color: #ffffff !important; 
+            
+            /* 빛나는 그림자 효과 추가 */
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4); 
         }
 
-        /* 카드 여백 설정 */
+        /* 카드 설정 (여백 확보) */
         .card {
             position: relative;
             padding-bottom: 80px !important; 
@@ -116,4 +119,48 @@
                 <img src="images/photo1.jpg" class="card-bg-img" alt="">
             </a>
 
-            <a href="resources.html" class="card fade-
+            <a href="resources.html" class="card fade-in-scroll">
+                <div>
+                    <div class="card-tag">Archive</div>
+                    <h3>자료실</h3>
+                    <p>보고서 다운로드.</p>
+                </div>
+                <div class="card-link-icon">💾</div>
+            </a>
+
+            <a href="guestbook.html" class="card col-span-2 fade-in-scroll">
+                <div>
+                    <div class="card-tag">Guestbook</div>
+                    <h3>방문자 방명록</h3>
+                    <p>여러분의 소중한 의견과 피드백을 남겨주세요.</p>
+                </div>
+                <div class="card-link-icon">💬</div>
+            </a>
+
+            <a href="about.html" class="card fade-in-scroll">
+                <div>
+                    <div class="card-tag">Profile</div>
+                    <h3>나의 소개</h3>
+                    <p>프로젝트 기획자<br>[다준] 프로필.</p>
+                </div>
+                <div class="card-link-icon">🙋‍♂️</div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h3>WAR & PEACE</h3>
+        <p>2025 [다준] 졸업 프로젝트 Archive.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
