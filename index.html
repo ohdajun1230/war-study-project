@@ -7,41 +7,43 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* ✨ 화살표 및 아이콘 색상 변경 (여기가 핵심!) */
+        /* ✨ 화살표/아이콘 스타일 수정 */
         .card-link-icon {
-            /* 1. 아이콘 색상: 진한 검은색 (잘 보임) */
+            /* 1. 디자인: 흰색 동그라미 + 검은색 아이콘 */
             color: #000000 !important;
-            
-            /* 2. 배경: 흰색 동그라미 (어떤 카드 위에서도 잘 보임) */
             background-color: #ffffff;
             width: 45px;
             height: 45px;
-            border-radius: 50%; /* 완전한 원형 */
+            border-radius: 50%;
             
-            /* 3. 위치 및 정렬 */
+            /* 2. 중앙 정렬 */
             display: flex;
             align-items: center;
             justify-content: center;
-            position: absolute;
-            bottom: 25px;
-            right: 25px;
-            font-size: 20px; /* 아이콘 크기 */
+            font-size: 20px;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* 그림자 */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             z-index: 10;
             transition: all 0.3s ease;
+
+            /* 3. 위치 설정 (왼쪽으로 변경!) */
+            position: absolute;
+            bottom: 30px;  /* 아래에서 30px */
+            left: 30px;    /* 왼쪽에서 30px (원래 위치) */
         }
 
-        /* 4. 마우스 올렸을 때 효과 */
+        /* 마우스 올렸을 때 효과 */
         .card:hover .card-link-icon {
-            transform: scale(1.1); /* 커짐 */
-            background-color: #000000; /* 배경이 검정으로 */
-            color: #ffffff !important; /* 아이콘이 흰색으로 반전 */
+            transform: scale(1.1);
+            background-color: #000000;
+            color: #ffffff !important;
         }
 
-        /* (참고) 카드에 position: relative가 있어야 아이콘 위치가 잡힘 */
+        /* 카드 설정 */
         .card {
             position: relative;
+            /* 아이콘이 텍스트를 가리지 않도록 하단 여백 추가 */
+            padding-bottom: 80px !important; 
         }
     </style>
 </head>
