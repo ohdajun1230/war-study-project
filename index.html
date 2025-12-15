@@ -6,19 +6,14 @@
     <title>War & Peace: 현장 기록 프로젝트</title>
     <link rel="stylesheet" href="style.css">
     
-    <style>
-        /* ✨ 화살표/아이콘 스타일 */
+<style>
+        /* [PC/기본 스타일] */
         .card-link-icon {
-            /* 1. 기본 상태: 흰색 배경 + 검은색 아이콘 */
             background-color: #ffffff;
             color: #000000 !important;
-            
-            /* 사이즈 및 모양 */
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            
-            /* 중앙 정렬 */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -26,32 +21,38 @@
             font-weight: bold;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             z-index: 10;
-            transition: all 0.3s ease; /* 부드러운 애니메이션 */
-
-            /* 2. 위치: 왼쪽 아래 (Left Bottom) */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: absolute;
             bottom: 30px;
-            left: 30px;
+            left: 30px; /* 왼쪽 배치 */
         }
 
-        /* ✨ 3. 마우스 올렸을 때 효과 (여기를 바꿨습니다!) */
         .card:hover .card-link-icon {
-            transform: scale(1.1); /* 살짝 커짐 */
-            
-            /* 기존 검정(#000) -> '로얄 블루(#2563eb)'로 변경 */
-            background-color: #2563eb; 
-            
-            /* 아이콘은 흰색으로 반전 */
-            color: #ffffff !important; 
-            
-            /* 빛나는 그림자 효과 추가 */
-            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4); 
+            transform: scale(1.1); /* 크기만 커짐 */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+            /* 색상은 흰색 유지 */
         }
 
-        /* 카드 설정 (여백 확보) */
         .card {
             position: relative;
             padding-bottom: 80px !important; 
+        }
+
+        /* 📱 [모바일 최적화: 화면이 768px보다 작을 때 적용] */
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; padding: 15px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; font-size: 14px; }
+            
+            /* 카드 한 줄로 정렬 */
+            .bento-grid { grid-template-columns: 1fr !important; gap: 20px; }
+            .card, .card-dark, .card-light { grid-column: span 1 !important; grid-row: auto !important; min-height: auto; }
+            
+            /* 폰트 크기 조절 */
+            .hero h1 { font-size: 32px !important; }
+            .section { padding: 20px; }
+            
+            /* 아이콘 위치 미세 조정 */
+            .card-link-icon { bottom: 20px; left: 20px; width: 40px; height: 40px; font-size: 18px; }
         }
     </style>
 </head>
