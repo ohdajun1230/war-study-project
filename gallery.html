@@ -6,28 +6,35 @@
     <title>현장 갤러리</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* 갤러리 전용 스타일 */
+        /* 갤러리 전용 스타일: 사진을 균일하고 예쁘게 만듭니다 */
         .gallery-img {
             width: 100%;
-            height: 250px;       /* 사진 높이 고정 (깔끔하게) */
-            object-fit: cover;   /* 사진 찌그러짐 방지 */
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            height: 250px;       /* 사진 높이 고정 (들쑥날쑥 방지) */
+            object-fit: cover;   /* 사진 찌그러짐 방지 (꽉 채우기) */
+            border-radius: 12px; /* 모서리 둥글게 */
+            margin-bottom: 15px;
+            display: block;      /* 하단 여백 버그 방지 */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         
-        /* 설명글이 길어도 잘리지 않게 그리드 높이 자동 조절 */
-        .bento-grid {
-            grid-template-rows: auto !important; /* 높이 제한 해제 */
+        /* 텍스트 가독성 높이기 */
+        .card h3 { 
+            margin: 10px 0 8px 0; 
+            font-size: 20px; 
+            font-weight: 700; 
+            color: #333;
         }
-        
-        /* 카드 내부 텍스트 스타일 */
-        .card h3 { margin-bottom: 10px; font-size: 22px; }
         .card p { 
+            font-size: 15px; 
             color: #555; 
-            font-size: 16px; 
             line-height: 1.6; 
-            margin-bottom: 10px; 
+            margin-bottom: 15px; 
+            word-break: keep-all; /* 한글 단어 끊김 방지 */
+        }
+
+        /* 설명글이 길어도 잘리지 않도록 그리드 높이 자동 조절 */
+        .bento-grid { 
+            grid-template-rows: auto !important; 
         }
     </style>
 </head>
@@ -62,24 +69,27 @@
             </div>
 
             <div class="card">
-                <img src="images/vietnamDMZ.jpg" class="gallery-img" alt="베트남 DMZ">
+                <img src="images/vietnamDMZ.jpg" class="gallery-img" alt="베트남 DMZ 탐방">
                 <h3>베트남 DMZ 탐방</h3>
                 <p>과연 분단이란 무엇일까. 고작 선을 그려놓고 넘지 못하게 하는 것은 무슨 의미가 있을까.</p>
             </div>
 
             <div class="card">
-                <img src="images/war_memory1.jpg" class="gallery-img" alt="전쟁 기억">
+                <img src="images/war_memory1.jpg" class="gallery-img" alt="전쟁 기록">
                 <h3>전쟁, 그 기억의 파편</h3>
                 <p>'스스로 지키지 않으면 지켜주지 않는다.' 그저 현재 계속해서 국방력을 강화하고 있는 상황을 합리화하는듯하다.</p>
             </div>
 
-            <div class="card" style="display:flex; flex-direction:column; justify-content:center; align-items:center; background-color:#f9f9f9;">
-                <span style="font-size:40px; margin-bottom:10px;">💾</span>
+            <div class="card" style="display:flex; flex-direction:column; justify-content:center; align-items:center; background-color:#f8f9fa;">
+                <span style="font-size:48px; margin-bottom:15px;">💾</span>
                 <h3>사진 전체 저장</h3>
-                <p style="text-align:center; margin-bottom:20px; font-size:14px; color:#666;">
+                <p style="text-align:center; margin-bottom:20px; color:#666;">
                     모든 현장 기록을<br>한 번에 다운로드하세요.
                 </p>
-                <a href="files/gallery_photos.zip" download class="cta-btn" style="font-size:14px; padding:10px 20px;">Download ZIP</a>
+                
+                <a href="images/gallery_photos.zip" download class="cta-btn" style="padding: 10px 24px; font-size:14px;">
+                    Download ZIP
+                </a>
             </div>
 
         </div>
