@@ -6,14 +6,28 @@
     <title>현장 갤러리</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* 갤러리 전용 스타일 (사진 예쁘게 만들기) */
+        /* 갤러리 전용 스타일 */
         .gallery-img {
             width: 100%;
-            height: 250px;       /* 높이 고정 (들쑥날쑥 방지) */
-            object-fit: cover;   /* 사진 찌그러짐 방지 (꽉 채우기) */
-            border-radius: 12px; /* 모서리 둥글게 */
-            margin-bottom: 15px;
+            height: 250px;       /* 사진 높이 고정 (깔끔하게) */
+            object-fit: cover;   /* 사진 찌그러짐 방지 */
+            border-radius: 12px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* 설명글이 길어도 잘리지 않게 그리드 높이 자동 조절 */
+        .bento-grid {
+            grid-template-rows: auto !important; /* 높이 제한 해제 */
+        }
+        
+        /* 카드 내부 텍스트 스타일 */
+        .card h3 { margin-bottom: 10px; font-size: 22px; }
+        .card p { 
+            color: #555; 
+            font-size: 16px; 
+            line-height: 1.6; 
+            margin-bottom: 10px; 
         }
     </style>
 </head>
