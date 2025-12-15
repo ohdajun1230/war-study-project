@@ -3,8 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>War & Peace: 현장 기록 프로젝트</title>
+    <title>WAR & PEACE - Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* 홈 화면 전용 스타일 */
+        
+        /* 1. 어두운 카드 스타일 (스크린샷 참고) */
+        .card-dark {
+            background-color: #1a1f2c; /* 진한 남색 배경 */
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            position: relative; /* 버튼 위치 잡기 위해 필수 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 240px; /* 카드 높이 확보 */
+            transition: transform 0.3s ease;
+        }
+        
+        .card-dark:hover {
+            transform: translateY(-5px); /* 마우스 올리면 살짝 뜸 */
+        }
+
+        .card-dark h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .card-dark p {
+            font-size: 16px;
+            color: #a0aec0; /* 회색 텍스트 */
+            line-height: 1.6;
+        }
+
+        .card-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #4299e1; /* 파란색 포인트 */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* ✨ 2. 동그라미 화살표 버튼 (핵심 수정!) */
+        .circle-btn {
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff; /* 버튼 배경: 흰색 */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            position: absolute; /* 카드 안에서 위치 고정 */
+            bottom: 30px;       /* 아래에서 30px 띄움 */
+            left: 30px;         /* 왼쪽에서 30px 띄움 */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        /* 화살표 아이콘 색상 (여기를 바꿨습니다!) */
+        .circle-btn i {
+            font-size: 20px;
+            color: #000000; /* ✨ 진한 검은색 화살표 (잘 보임) */
+        }
+
+        /* 마우스 올렸을 때 효과 */
+        .circle-btn:hover {
+            transform: scale(1.1); /* 커짐 */
+            background-color: #4299e1; /* 배경이 파란색으로 변함 */
+        }
+        .circle-btn:hover i {
+            color: #ffffff; /* 화살표가 흰색으로 변함 */
+        }
+
+        /* 밝은 카드 스타일 (일반 메뉴용) */
+        .card-light {
+            background-color: #f7fafc;
+            color: #333;
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #edf2f7;
+        }
+        
+        .card-light .circle-btn {
+            background-color: #1a1f2c; /* 밝은 카드에서는 버튼이 어두운 색 */
+        }
+        .card-light .circle-btn i {
+            color: #ffffff; /* 화살표는 흰색 */
+        }
+    </style>
 </head>
 <body>
 
@@ -17,87 +115,77 @@
                 <a href="gallery.html">갤러리</a>
                 <a href="map.html">지도</a>
                 <a href="resources.html">자료실</a>
-                <a href="guestbook.html">방명록</a> </div>
+                <a href="guestbook.html">방명록</a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="hero-label">2025 Graduation Project</div>
-            <h1>기록되지 않은 역사는<br>반복됩니다.</h1>
-            <p>전쟁의 아픔이 서린 현장을 직접 방문하고,<br>평화의 가치를 다시금 새기는 기록의 여정.</p>
-            <a href="project.html" class="cta-btn">프로젝트 확인하기</a>
-        </div>
+    <header class="page-header fade-in-scroll">
+        <h1 class="page-title">WAR & PEACE</h1>
+        <p class="page-desc">우리가 걸어온 길과 기록들을 한눈에 확인하세요.<br>평화를 위한 여정의 시작입니다.</p>
     </header>
 
-    <section class="section">
-        <div class="section-header fade-in-scroll">
-            <h2 class="section-title">프로젝트 하이라이트</h2>
-            <p class="section-desc">우리가 걸어온 길과 기록들을 한눈에 확인하세요.</p>
-        </div>
-
-        <div class="bento-grid">
+    <main class="section">
+        <div class="bento-grid fade-in-scroll">
             
-            <a href="project.html" class="card col-span-2 card-dark fade-in-scroll">
-                <div>
-                    <div class="card-tag">Overview</div>
+            <div class="card-dark" style="grid-column: span 2;"> <div>
+                    <span class="card-label">Overview</span>
                     <h3>프로젝트 전체 보기</h3>
                     <p>기획 의도부터 현장 답사 과정, 그리고 최종 결론까지.<br>우리의 모든 여정을 담았습니다.</p>
                 </div>
-                <div class="card-link-icon">→</div>
-                <img src="images/project_thumb.jpg" class="card-bg-img" alt="">
-            </a>
+                <a href="project.html" class="circle-btn" title="이동하기">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
 
-            <a href="map.html" class="card row-span-2 fade-in-scroll">
+            <div class="card-light">
                 <div>
-                    <div class="card-tag">Location Map</div>
-                    <h3>현장 방문 지도</h3>
-                    <p>용산에서 철원까지.<br>지도로 보는 답사 경로.</p>
+                    <span class="card-label" style="color:#e53e3e;">Gallery</span>
+                    <h3>현장 갤러리</h3>
+                    <p>대전, 베트남 DMZ 등 현장에서 직접 촬영한 생생한 사진 기록.</p>
                 </div>
-                <div class="card-link-icon">📍</div>
-                <img src="images/map_thumb.jpg" class="card-bg-img" alt="">
-            </a>
+                <a href="gallery.html" class="circle-btn" title="갤러리 보기">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
 
-            <a href="gallery.html" class="card fade-in-scroll">
+            <div class="card-light">
                 <div>
-                    <div class="card-tag">Gallery</div>
-                    <h3>현장의 기록</h3>
-                    <p>글로 다 담지 못한<br>생생한 사진들.</p>
+                    <span class="card-label" style="color:#38a169;">Map</span>
+                    <h3>탐방 지도</h3>
+                    <p>우리가 방문했던 장소들의 위치와 경로를 지도에서 확인하세요.</p>
                 </div>
-                <div class="card-link-icon">📸</div>
-                <img src="images/photo1.jpg" class="card-bg-img" alt="">
-            </a>
+                <a href="map.html" class="circle-btn" title="지도 보기">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
 
-            <a href="resources.html" class="card fade-in-scroll">
+            <div class="card-dark">
                 <div>
-                    <div class="card-tag">Archive</div>
-                    <h3>자료실</h3>
-                    <p>보고서 다운로드.</p>
+                    <span class="card-label">About Us</span>
+                    <h3>팀 소개</h3>
+                    <p>이 프로젝트를 함께 만든 팀원들과<br>우리의 목표를 소개합니다.</p>
                 </div>
-                <div class="card-link-icon">💾</div>
-            </a>
+                <a href="about.html" class="circle-btn" title="소개 보기">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
 
-            <a href="guestbook.html" class="card col-span-2 fade-in-scroll">
-                <div>
-                    <div class="card-tag">Guestbook</div>
-                    <h3>방문자 방명록</h3>
-                    <p>여러분의 소중한 의견과 피드백을 남겨주세요.</p>
+            <div class="card-light" style="grid-column: span 2;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                    <div>
+                        <span class="card-label" style="color:#805ad5;">Archive</span>
+                        <h3>자료실 & 방명록</h3>
+                        <p>발표 자료와 보고서를 다운로드하거나,<br>방문 기록을 남겨주세요.</p>
+                    </div>
                 </div>
-                <div class="card-link-icon">💬</div>
-            </a>
-
-            <a href="about.html" class="card fade-in-scroll">
-                <div>
-                    <div class="card-tag">Profile</div>
-                    <h3>나의 소개</h3>
-                    <p>프로젝트 기획자<br>[다준] 프로필.</p>
-                </div>
-                <div class="card-link-icon">🙋‍♂️</div>
-            </a>
+                <a href="resources.html" class="circle-btn" title="자료실 이동">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
 
         </div>
-    </section>
+    </main>
 
     <footer class="footer">
         <h3>WAR & PEACE</h3>
@@ -106,9 +194,7 @@
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
     </script>
