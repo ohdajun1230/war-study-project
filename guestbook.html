@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>방명록</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -44,7 +46,9 @@
             </script>
         </div>
     </main>
+
     <footer class="footer"><p>2025 [다준] 졸업 프로젝트.</p></footer>
+
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
