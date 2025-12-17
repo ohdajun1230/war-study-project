@@ -1,4 +1,4 @@
-/* style.css - Map Size Fixed Version */
+/* style.css - Map Size Perfect Fixed Version */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 :root {
@@ -114,18 +114,20 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 /* ----------------------------------------------------
    [지도 전용 스타일 - PC 수정됨]
-   비율(%) 대신 고정 높이(px)를 사용하여 너무 커지는 것 방지
+   ★ 핵심: max-width로 가로폭 제한, margin: 0 auto로 가운데 정렬
 ---------------------------------------------------- */
 .map-responsive {
     position: relative;
     width: 100%;
-    /* 높이를 400px로 고정 (기존 % 방식 제거) */
-    height: 400px; 
-    padding-bottom: 0; 
+    max-width: 1000px; /* PC에서 지도 가로가 너무 커지지 않게 제한 */
+    height: 500px;     /* PC에서 적당한 높이 */
+    margin: 0 auto;    /* 화면 중앙 정렬 */
+    
     overflow: hidden;
     border-radius: 20px;
     border: 1px solid #e5e8eb;
     background-color: #eee;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 살짝 그림자 */
 }
 .map-responsive iframe {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
@@ -209,10 +211,13 @@ ul { list-style: none; padding: 0; margin: 0; }
     .hero h1 { font-size: 36px; } 
     .hero p { font-size: 16px; }
 
-    /* 4. 지도 크기 (PC와 모바일 모두 400px로 통일) */
+    /* 4. 지도 크기 최적화 (모바일) */
     .map-responsive {
-        height: 400px !important;      /* ★ 높이 강제 고정 */
-        padding-bottom: 0 !important;  
+        /* 모바일에서는 가로폭 제한을 풀어서 꽉 차게 */
+        max-width: 100% !important; 
+        height: 400px !important;      /* 높이 강제 고정 */
+        margin: 0 !important;          /* 여백 제거 */
+        border-radius: 12px;           /* 모바일에선 둥글기 살짝 줄임 */
     }
     /* 내용물(지도)도 강제로 꽉 차게 */
     .map-responsive iframe { height: 100% !important; }
