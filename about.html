@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 소개</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
     <nav class="nav">
         <div class="nav-container">
             <a href="index.html" class="logo">WAR & PEACE</a>
@@ -33,21 +35,51 @@
                 성미산학교에 재학 중이며, 평소 역사와 사회 문제에 깊은 관심을 가지고 있습니다.<br>
                 교과서 속의 텍스트로만 배우는 역사가 아니라, <strong>'현장이 말해주는 역사'</strong>를 듣기 위해 이번 프로젝트를 시작했습니다.
             </p>
+            
             <br>
+            
             <h3>📩 Contact</h3>
-            <ul style="margin-top:10px; color:#555;">
-                <li>Email: ohdajun1230@naver.com</li>
-                <li>GitHub: @ohdajun1230</li>
+            <ul style="margin-top:10px; color:#555; list-style: none; padding-left: 0;">
+                
+                <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-weight: 600;">Email:</span>
+                    <a href="mailto:ohdajun1230@naver.com" style="color:#3182f6; font-weight:600; text-decoration: underline;">
+                        ohdajun1230@naver.com
+                    </a>
+                    <button onclick="copyEmail()" style="padding: 4px 8px; border: 1px solid #ddd; background: #fff; border-radius: 4px; cursor: pointer; font-size: 12px; color: #555;">
+                        복사
+                    </button>
+                </li>
+
+                <li>
+                    <span style="font-weight: 600;">GitHub:</span>
+                    <a href="https://github.com/ohdajun1230" target="_blank" style="color:#3182f6; font-weight:600;">
+                        @ohdajun1230
+                    </a>
+                </li>
             </ul>
+
         </div>
     </main>
 
     <footer class="footer"><p>2025 다준 졸업 프로젝트 Archive.</p></footer>
-    <script> /* index.html의 스크립트와 동일하게 넣어주세요 */ 
+
+    <script>
+        // 1. 애니메이션 스크립트
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
+
+        // 2. 이메일 복사 기능 스크립트
+        function copyEmail() {
+            const email = "ohdajun1230@naver.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("이메일 주소가 복사되었습니다! (" + email + ")");
+            }).catch(err => {
+                console.error('복사 실패:', err);
+            });
+        }
     </script>
 </body>
 </html>
