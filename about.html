@@ -6,6 +6,36 @@
     <title>나의 소개</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* 알림창 디자인 */
+        #toast {
+            visibility: hidden; /* 평소엔 숨김 */
+            min-width: 250px;
+            background-color: rgba(30, 30, 30, 0.9); /* 반투명 검정 배경 */
+            color: #fff; /* 흰색 글씨 */
+            text-align: center;
+            border-radius: 50px; /* 둥근 알약 모양 */
+            padding: 13px 20px;
+            position: fixed;
+            z-index: 1000; /* 맨 위에 뜨게 */
+            left: 50%;
+            bottom: 30px; /* 화면 아래쪽에 위치 */
+            transform: translateX(-50%); /* 정확히 가운데 정렬 */
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.5s, bottom 0.5s; /* 부드러운 애니메이션 */
+        }
+
+        /* 알림창이 뜰 때 적용되는 클래스 */
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+            bottom: 50px; /* 살짝 위로 올라오는 효과 */
+        }
+    </style>
 </head>
 <body>
 
@@ -43,7 +73,6 @@
                 
                 <li style="margin-bottom: 10px;">
                     <span style="font-weight: 600; margin-right: 8px;">Email:</span>
-                    
                     <a href="#" onclick="copyEmail(event)" 
                        style="color: #333333; font-weight: 600; text-decoration: none; border-bottom: 1px solid #ccc; transition: all 0.2s;"
                        onmouseover="this.style.color='#3182f6'; this.style.borderColor='#3182f6'"
@@ -69,6 +98,8 @@
 
     <footer class="footer"><p>2025 다준 졸업 프로젝트 Archive.</p></footer>
 
+    <div id="toast">이메일 주소가 복사되었습니다! ✅</div>
+
     <script>
         // 애니메이션
         const observer = new IntersectionObserver((entries) => {
@@ -76,18 +107,24 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
 
-        // [이메일 클릭 시 복사 기능]
+        // [이메일 클릭 시 토스트 메시지 띄우기]
         function copyEmail(e) {
-            e.preventDefault(); // 링크 이동 막기
+            e.preventDefault(); 
             const email = "ohdajun1230@naver.com";
             
             navigator.clipboard.writeText(email).then(() => {
-                // 복사 성공 시 알림
-                alert("이메일 주소가 복사되었습니다! \n(" + email + ")");
+                showToast(); // 성공하면 알림창 함수 실행
             }).catch(err => {
                 console.error('복사 실패:', err);
                 prompt("Ctrl+C를 눌러 복사하세요:", email);
             });
+        }
+
+        // 토스트 메시지 함수
+        function showToast() {
+            var x = document.getElementById("toast");
+            x.className = "show"; // 보이게 하기
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000); // 3초 뒤에 사라지게 하기
         }
     </script>
 </body>
