@@ -41,19 +41,24 @@
             <h3>📩 Contact</h3>
             <ul style="margin-top:10px; color:#555; list-style: none; padding-left: 0;">
                 
-                <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                    <span style="font-weight: 600;">Email:</span>
-                    <a href="mailto:ohdajun1230@naver.com" style="color:#3182f6; font-weight:600; text-decoration: underline;">
+                <li style="margin-bottom: 10px;">
+                    <span style="font-weight: 600; margin-right: 8px;">Email:</span>
+                    
+                    <a href="#" onclick="copyEmail(event)" 
+                       style="color: #333333; font-weight: 600; text-decoration: none; border-bottom: 1px solid #ccc; transition: all 0.2s;"
+                       onmouseover="this.style.color='#3182f6'; this.style.borderColor='#3182f6'"
+                       onmouseout="this.style.color='#333333'; this.style.borderColor='#ccc'"
+                       title="클릭하여 이메일 복사">
                         ohdajun1230@naver.com
                     </a>
-                    <button onclick="copyEmail()" style="padding: 4px 8px; border: 1px solid #ddd; background: #fff; border-radius: 4px; cursor: pointer; font-size: 12px; color: #555;">
-                        복사
-                    </button>
                 </li>
 
                 <li>
-                    <span style="font-weight: 600;">GitHub:</span>
-                    <a href="https://github.com/ohdajun1230" target="_blank" style="color:#3182f6; font-weight:600;">
+                    <span style="font-weight: 600; margin-right: 8px;">GitHub:</span>
+                    <a href="https://github.com/ohdajun1230" target="_blank" 
+                       style="color: #333333; font-weight: 600; text-decoration: none; border-bottom: 1px solid #ccc; transition: all 0.2s;"
+                       onmouseover="this.style.color='#3182f6'; this.style.borderColor='#3182f6'"
+                       onmouseout="this.style.color='#333333'; this.style.borderColor='#ccc'">
                         @ohdajun1230
                     </a>
                 </li>
@@ -65,19 +70,23 @@
     <footer class="footer"><p>2025 다준 졸업 프로젝트 Archive.</p></footer>
 
     <script>
-        // 1. 애니메이션 스크립트
+        // 애니메이션
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
 
-        // 2. 이메일 복사 기능 스크립트
-        function copyEmail() {
+        // [이메일 클릭 시 복사 기능]
+        function copyEmail(e) {
+            e.preventDefault(); // 링크 이동 막기
             const email = "ohdajun1230@naver.com";
+            
             navigator.clipboard.writeText(email).then(() => {
-                alert("이메일 주소가 복사되었습니다! (" + email + ")");
+                // 복사 성공 시 알림
+                alert("이메일 주소가 복사되었습니다! \n(" + email + ")");
             }).catch(err => {
                 console.error('복사 실패:', err);
+                prompt("Ctrl+C를 눌러 복사하세요:", email);
             });
         }
     </script>
